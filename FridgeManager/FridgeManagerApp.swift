@@ -12,7 +12,7 @@ import SwiftData
 struct FridgeManagerApp: App {
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
-            Item.self,
+            FridgeItem.self,
             Fridge.self,
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)

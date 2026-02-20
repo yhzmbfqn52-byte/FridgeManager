@@ -10,7 +10,7 @@ import SwiftData
 
 struct ContentView: View {
     @Environment(\.modelContext) private var modelContext
-    @Query private var items: [Item]
+    @Query private var items: [FridgeItem]
 
     @State private var showingSettings: Bool = false
     @State private var showingAbout: Bool = false
@@ -80,6 +80,6 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
-        .modelContainer(for: Item.self, inMemory: true)
+        .modelContainer(for: FridgeItem.self, inMemory: true)
         .preferredColorScheme(.dark)
 }
