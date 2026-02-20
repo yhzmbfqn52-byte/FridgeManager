@@ -14,6 +14,8 @@ struct FridgeManagerApp: App {
         let schema = Schema([
             FridgeItem.self,
             Fridge.self,
+            Shelf.self,
+            Drawer.self,
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
 

@@ -39,6 +39,11 @@ struct SplashView: View {
                     .foregroundColor(.white)
                     .opacity(textOpacity)
                     .scaleEffect(textOpacity > 0 ? 1 : 0.98)
+                    // Make text wrap and fit the available width
+                    .multilineTextAlignment(.center)
+                    .lineLimit(2)
+                    .minimumScaleFactor(0.6)
+                    .frame(maxWidth: .infinity)
             }
             .padding(24)
             .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 16, style: .continuous))

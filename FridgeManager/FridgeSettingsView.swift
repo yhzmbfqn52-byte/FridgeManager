@@ -10,6 +10,11 @@ struct FridgeSettingsView: View {
     @State private var selectedFridge: Fridge?
     @State private var showingDeleteConfirm: Bool = false
 
+    private var defaultFridgeId: UUID? {
+        guard let s = UserDefaults.standard.string(forKey: "defaultFridgeId") else { return nil }
+        return UUID(uuidString: s)
+    }
+
     var body: some View {
         List {
             Section(header: Text("Fridges")) {
@@ -20,8 +25,15 @@ struct FridgeSettingsView: View {
                     ForEach(fridges) { fridge in
                         HStack {
                             VStack(alignment: .leading) {
-                                Text(fridge.name)
-                                    .font(.headline)
+                                HStack {
+                                    Text(fridge.name)
+                                        .font(.headline)
+                                    if fridge.id == defaultFridgeId {
+                                        Text("(Default)")
+                                            .font(.caption)
+                                            .foregroundStyle(.secondary)
+                                    }
+                                }
                                 Text(fridge.type)
                                     .font(.subheadline)
                                     .foregroundStyle(.secondary)
@@ -32,6 +44,12 @@ struct FridgeSettingsView: View {
                                 showingWizardForEdit = true
                             }
                             .buttonStyle(.bordered)
+
+                            Button("Set Default") {
+                                UserDefaults.standard.set(fridge.id.uuidString, forKey: "defaultFridgeId")
+                            }
+                            .buttonStyle(.borderedProminent)
+                            .tint(.accentColor)
                         }
                     }
                     .onDelete(perform: deleteFridges)
@@ -91,6 +109,7 @@ struct FridgeSettingsView: View {
             try modelContext.save()
             // Reset first-run flag so wizard reappears if desired
             UserDefaults.standard.set(false, forKey: "hasCompletedWizard")
+            UserDefaults.standard.removeObject(forKey: "defaultFridgeId")
             onDone?()
         } catch {
             print("Failed to delete all fridges: \(error)")
@@ -103,7 +122,7 @@ struct FridgeSettingsView_Previews: PreviewProvider {
         NavigationStack {
             FridgeSettingsView()
         }
-        .modelContainer(for: Fridge.self, inMemory: true)
+        .modelContainer(for: [Fridge.self, Shelf.self, Drawer.self], inMemory: true)
         .preferredColorScheme(.dark)
     }
 }

@@ -6,7 +6,7 @@ struct FridgeWizardView: View {
 
     @State private var name: String
     @State private var selectedTypeIndex: Int
-    @State private var shelfCount: Int
+    @State private var shelfCount: Int // keep a temp value for simple creation UI
     @State private var showingError: Bool = false
 
     static let fridgeTypes = ["Standard", "Mini", "Double Door", "Smart"]
@@ -21,8 +21,13 @@ struct FridgeWizardView: View {
         _name = State(initialValue: fridge?.name ?? "My Fridge")
         let initialType = fridge?.type ?? Self.fridgeTypes.first!
         _selectedTypeIndex = State(initialValue: Self.fridgeTypes.firstIndex(of: initialType) ?? 0)
-        _shelfCount = State(initialValue: fridge?.shelfCount ?? 3)
+        _shelfCount = State(initialValue: (fridge?.shelves.count ?? 3))
     }
+
+    @State private var shelves: [Shelf] = []
+    @State private var drawers: [Drawer] = []
+    @State private var newShelfName: String = ""
+    @State private var newDrawerName: String = ""
 
     var body: some View {
         NavigationView {
@@ -36,8 +41,56 @@ struct FridgeWizardView: View {
                         }
                     }
 
-                    Stepper(value: $shelfCount, in: 1...12) {
-                        Text("Shelves: \(shelfCount)")
+                    Stepper(value: $shelfCount, in: 0...12) {
+                        Text("Initial shelves: \(shelfCount)")
+                    }
+                }
+
+                Section(header: Text("Shelves")) {
+                    ForEach(shelves.indices, id: \.self) { idx in
+                        HStack {
+                            Text(shelves[idx].name)
+                            Spacer()
+                            Button("Remove") {
+                                shelves.remove(at: idx)
+                            }
+                            .buttonStyle(.bordered)
+                            .tint(.red)
+                        }
+                    }
+
+                    HStack {
+                        TextField("New shelf name", text: $newShelfName)
+                        Button("Add") {
+                            let s = Shelf(name: newShelfName.isEmpty ? "Shelf \(shelves.count + 1)" : newShelfName, position: shelves.count + 1)
+                            shelves.append(s)
+                            newShelfName = ""
+                        }
+                        .disabled(newShelfName.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)
+                    }
+                }
+
+                Section(header: Text("Drawers")) {
+                    ForEach(drawers.indices, id: \.self) { idx in
+                        HStack {
+                            Text(drawers[idx].name)
+                            Spacer()
+                            Button("Remove") {
+                                drawers.remove(at: idx)
+                            }
+                            .buttonStyle(.bordered)
+                            .tint(.red)
+                        }
+                    }
+
+                    HStack {
+                        TextField("New drawer name", text: $newDrawerName)
+                        Button("Add") {
+                            let d = Drawer(name: newDrawerName.isEmpty ? "Drawer \(drawers.count + 1)" : newDrawerName, position: drawers.count + 1)
+                            drawers.append(d)
+                            newDrawerName = ""
+                        }
+                        .disabled(newDrawerName.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)
                     }
                 }
 
@@ -57,6 +110,21 @@ struct FridgeWizardView: View {
                         }
                     }
                 }
+            }
+            .onAppear {
+                // Initialize temp lists from fridge if editing
+                if let f = fridge {
+                    shelves = f.shelves
+                    drawers = f.drawers
+                } else {
+                    // Prepopulate initial shelves when creating
+                    if shelves.isEmpty {
+                        for i in 1...shelfCount {
+                            shelves.append(Shelf(name: "Shelf \(i)", position: i))
+                        }
+                    }
+                }
+
             }
             .navigationTitle(fridge == nil ? "Setup Fridge" : "Edit Fridge")
             .toolbar {
@@ -83,10 +151,11 @@ struct FridgeWizardView: View {
             if let fridge = fridge {
                 fridge.name = trimmed
                 fridge.type = Self.fridgeTypes[selectedTypeIndex]
-                fridge.shelfCount = shelfCount
+                fridge.shelves = shelves
+                fridge.drawers = drawers
                 try modelContext.save()
             } else {
-                let newFridge = Fridge(name: trimmed, type: Self.fridgeTypes[selectedTypeIndex], shelfCount: shelfCount)
+                let newFridge = Fridge(name: trimmed, type: Self.fridgeTypes[selectedTypeIndex], shelves: shelves, drawers: drawers)
                 modelContext.insert(newFridge)
                 try modelContext.save()
                 // Mark wizard complete on first creation

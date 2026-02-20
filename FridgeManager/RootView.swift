@@ -32,7 +32,7 @@ struct RootView: View {
 struct RootView_Previews: PreviewProvider {
     static var previews: some View {
         RootView()
-            .modelContainer(for: Fridge.self, inMemory: true)
+            .modelContainer(for: [Fridge.self, Shelf.self, Drawer.self], inMemory: true)
             .preferredColorScheme(.dark)
     }
 }
