@@ -6,7 +6,6 @@ struct FridgeWizardView: View {
 
     @State private var name: String
     @State private var selectedTypeIndex: Int
-    @State private var shelfCount: Int // keep a temp value for simple creation UI
     @State private var showingError: Bool = false
 
     static let fridgeTypes = ["Standard", "Mini", "Double Door", "Smart"]
@@ -21,7 +20,6 @@ struct FridgeWizardView: View {
         _name = State(initialValue: fridge?.name ?? "My Fridge")
         let initialType = fridge?.type ?? Self.fridgeTypes.first!
         _selectedTypeIndex = State(initialValue: Self.fridgeTypes.firstIndex(of: initialType) ?? 0)
-        _shelfCount = State(initialValue: (fridge?.shelves.count ?? 3))
     }
 
     @State private var shelves: [Shelf] = []
@@ -39,10 +37,6 @@ struct FridgeWizardView: View {
                         ForEach(Self.fridgeTypes.indices, id: \.self) { idx in
                             Text(Self.fridgeTypes[idx]).tag(idx)
                         }
-                    }
-
-                    Stepper(value: $shelfCount, in: 0...12) {
-                        Text("Initial shelves: \(shelfCount)")
                     }
                 }
 
@@ -117,10 +111,15 @@ struct FridgeWizardView: View {
                     shelves = f.shelves
                     drawers = f.drawers
                 } else {
-                    // Prepopulate initial shelves when creating
+                    // Prepopulate defaults when creating: 5 shelves and 2 drawers if not already set
                     if shelves.isEmpty {
-                        for i in 1...shelfCount {
+                        for i in 1...5 {
                             shelves.append(Shelf(name: "Shelf \(i)", position: i))
+                        }
+                    }
+                    if drawers.isEmpty {
+                        for i in 1...2 {
+                            drawers.append(Drawer(name: "Drawer \(i)", position: i))
                         }
                     }
                 }

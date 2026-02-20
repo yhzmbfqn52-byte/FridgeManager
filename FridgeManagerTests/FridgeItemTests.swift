@@ -15,8 +15,8 @@ final class FridgeItemTests: XCTestCase {
         context.insert(fridge)
         try context.save()
 
-        // Add item assigned to the shelf
-        let item = FridgeItem(timestamp: Date(), productName: "Milk", expirationDate: Calendar.current.date(byAdding: .day, value: 7, to: Date())!, shelfId: shelf.id, drawerId: nil)
+        // Add item assigned to the shelf (use relationship)
+        let item = FridgeItem(timestamp: Date(), productName: "Milk", expirationDate: Calendar.current.date(byAdding: .day, value: 7, to: Date())!, shelf: shelf, drawer: nil)
         context.insert(item)
         try context.save()
 
@@ -24,6 +24,7 @@ final class FridgeItemTests: XCTestCase {
         let items = try context.fetch(FetchDescriptor<FridgeItem>())
         XCTAssertEqual(items.count, 1)
         XCTAssertEqual(items.first?.productName, "Milk")
-        XCTAssertEqual(items.first?.shelfId, shelf.id)
+        XCTAssertNotNil(items.first?.shelf)
+        XCTAssertEqual(items.first?.shelf?.name, shelf.name)
     }
 }

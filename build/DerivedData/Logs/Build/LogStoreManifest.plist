@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>logFormatVersion</key>
+	<integer>12</integer>
+	<key>logs</key>
+	<dict>
+		<key>612C1509-EAE5-41B7-BFEA-05512BCA6D6E</key>
+		<dict>
+			<key>className</key>
+			<string>IDECommandLineBuildLog</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>612C1509-EAE5-41B7-BFEA-05512BCA6D6E.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+				<key>totalNumberOfAnalyzerIssues</key>
+				<integer>0</integer>
+				<key>totalNumberOfErrors</key>
+				<integer>0</integer>
+				<key>totalNumberOfTestFailures</key>
+				<integer>0</integer>
+				<key>totalNumberOfWarnings</key>
+				<integer>0</integer>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FridgeManager project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FridgeManager</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Cleaning project FridgeManager with scheme FridgeManager and configuration Debug</string>
+			<key>timeStartedRecording</key>
+			<real>793271861.25341499</real>
+			<key>timeStoppedRecording</key>
+			<real>793271862.99617195</real>
+			<key>title</key>
+			<string>Cleaning project FridgeManager with scheme FridgeManager and configuration Debug</string>
+			<key>uniqueIdentifier</key>
+			<string>612C1509-EAE5-41B7-BFEA-05512BCA6D6E</string>
+		</dict>
+		<key>C8F8E3FD-6F42-465B-85E2-E74FF5756CB7</key>
+		<dict>
+			<key>className</key>
+			<string>IDECommandLineBuildLog</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>C8F8E3FD-6F42-465B-85E2-E74FF5756CB7.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+				<key>totalNumberOfAnalyzerIssues</key>
+				<integer>0</integer>
+				<key>totalNumberOfErrors</key>
+				<integer>0</integer>
+				<key>totalNumberOfTestFailures</key>
+				<integer>0</integer>
+				<key>totalNumberOfWarnings</key>
+				<integer>9</integer>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FridgeManager project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FridgeManager</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Building project FridgeManager with scheme FridgeManager and configuration Debug</string>
+			<key>timeStartedRecording</key>
+			<real>793271863.07896805</real>
+			<key>timeStoppedRecording</key>
+			<real>793271894.98231804</real>
+			<key>title</key>
+			<string>Building project FridgeManager with scheme FridgeManager and configuration Debug</string>
+			<key>uniqueIdentifier</key>
+			<string>C8F8E3FD-6F42-465B-85E2-E74FF5756CB7</string>
+		</dict>
+		<key>CD9369B0-2BE7-41D1-92DA-FECD4229C27A</key>
+		<dict>
+			<key>className</key>
+			<string>IDECommandLineBuildLog</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>CD9369B0-2BE7-41D1-92DA-FECD4229C27A.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+				<key>totalNumberOfAnalyzerIssues</key>
+				<integer>0</integer>
+				<key>totalNumberOfErrors</key>
+				<integer>245</integer>
+				<key>totalNumberOfTestFailures</key>
+				<integer>0</integer>
+				<key>totalNumberOfWarnings</key>
+				<integer>6</integer>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FridgeManager project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FridgeManager</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Building project FridgeManager with scheme FridgeManager and configuration Debug</string>
+			<key>timeStartedRecording</key>
+			<real>793271845.31805694</real>
+			<key>timeStoppedRecording</key>
+			<real>793271853.56959403</real>
+			<key>title</key>
+			<string>Building project FridgeManager with scheme FridgeManager and configuration Debug</string>
+			<key>uniqueIdentifier</key>
+			<string>CD9369B0-2BE7-41D1-92DA-FECD4229C27A</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

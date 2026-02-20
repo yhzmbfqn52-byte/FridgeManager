@@ -18,41 +18,90 @@ struct ContentView: View {
     @State private var showingAddItem: Bool = false
     @State private var showingWizard: Bool = false
 
+    // New state for editing an item
+    @State private var editingItem: FridgeItem? = nil
+    @State private var showingEditItem: Bool = false
+
+    // simple animation state for first item appearance
+    @State private var itemsLoaded: Bool = false
+
     var body: some View {
         NavigationSplitView {
-            List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        VStack(alignment: .leading, spacing: 8) {
-                            Text(item.productName.isEmpty ? "Unnamed product" : item.productName)
-                                .font(.title2)
-                            Text(locationName(for: item))
-                                .foregroundStyle(.secondary)
-                            Text("Added: \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
-                                .foregroundStyle(.secondary)
-                            Text("Expires: \(item.expirationDate, format: Date.FormatStyle(date: .numeric))")
-                                .foregroundStyle(.secondary)
+            // Replace List with a conditional that shows a placeholder when there are no items
+            Group {
+                if items.isEmpty {
+                    VStack(spacing: 12) {
+                        Spacer()
+                        Text("No Fridge Items yet")
+                            .font(.title2)
+                            .foregroundStyle(.secondary)
+                            .multilineTextAlignment(.center)
+                            .padding(.horizontal)
+                        Text("Tap + to add a new item or use the wizard to set up a fridge.")
+                            .font(.subheadline)
+                            .foregroundStyle(.secondary)
+                            .multilineTextAlignment(.center)
+                            .padding(.horizontal)
+
+                        Button(action: { showingWizard = true }) {
+                            Text("Create Fridge")
+                                .frame(maxWidth: .infinity)
                         }
-                        .padding()
-                    } label: {
-                        HStack {
-                            VStack(alignment: .leading) {
-                                Text(item.productName.isEmpty ? "(No name)" : item.productName)
-                                    .font(.headline)
-                                Text(locationName(for: item))
-                                    .font(.subheadline)
-                                    .foregroundStyle(.secondary)
-                                Text("Expires: \(item.expirationDate, format: Date.FormatStyle(date: .numeric))")
-                                    .font(.subheadline)
-                                    .foregroundStyle(.secondary)
+                        .buttonStyle(.borderedProminent)
+                        .padding(.horizontal)
+
+                        Spacer()
+                    }
+                } else {
+                    List {
+                        ForEach(items) { item in
+                            NavigationLink {
+                                VStack(alignment: .leading, spacing: 8) {
+                                    Text(item.productName.isEmpty ? "Unnamed product" : item.productName)
+                                        .font(.title2)
+                                    Text(item.locationDisplay)
+                                        .foregroundStyle(.secondary)
+                                    Text("Added: \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
+                                        .foregroundStyle(.secondary)
+                                    Text("Expires: \(item.expirationDate, format: Date.FormatStyle(date: .numeric))")
+                                        .foregroundStyle(.secondary)
+
+                                    // Edit button for this item (opens editor where timestamp is not editable)
+                                    Button("Edit") {
+                                        editingItem = item
+                                        showingEditItem = true
+                                    }
+                                    .buttonStyle(.bordered)
+                                    .padding(.top, 8)
+                                }
+                                .padding()
+                            } label: {
+                                HStack {
+                                    VStack(alignment: .leading) {
+                                        Text(item.productName.isEmpty ? "(No name)" : item.productName)
+                                            .font(.headline)
+                                        Text(item.locationDisplay)
+                                            .font(.subheadline)
+                                            .foregroundStyle(.secondary)
+                                        Text("Expires: \(item.expirationDate, format: Date.FormatStyle(date: .numeric))")
+                                            .font(.subheadline)
+                                            .foregroundStyle(.secondary)
+                                    }
+                                    Spacer()
+                                    Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .shortened))
+                                        .foregroundStyle(.secondary)
+                                }
                             }
-                            Spacer()
-                            Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .shortened))
-                                .foregroundStyle(.secondary)
+                        }
+                        .onDelete(perform: deleteItems)
+                    }
+                    .opacity(itemsLoaded ? 1 : 0)
+                    .onAppear {
+                        withAnimation(.easeIn(duration: 0.45)) {
+                            itemsLoaded = true
                         }
                     }
                 }
-                .onDelete(perform: deleteItems)
             }
             .listStyle(.insetGrouped)
             .scrollContentBackground(.hidden) // ensure dark background shows through
@@ -68,6 +117,7 @@ struct ContentView: View {
 
                         EditButton()
                             .tint(.accentColor)
+                            .disabled(items.isEmpty)
                     }
                 }
                 ToolbarItem(placement: .navigationBarLeading) {
@@ -108,22 +158,27 @@ struct ContentView: View {
         .sheet(isPresented: $showingWizard) {
             FridgeWizardView(onComplete: { showingWizard = false })
         }
+        // Present edit sheet for an item; timestamp is intentionally not editable in editor
+        .sheet(isPresented: $showingEditItem) {
+            if let editingItem {
+                NavigationStack {
+                    EditFridgeItemView(item: editingItem, isPresented: $showingEditItem)
+                        .environment(\.modelContext, modelContext)
+                }
+                .presentationDetents([.medium])
+            } else {
+                EmptyView()
+            }
+        }
     }
 
-    // Resolve a human readable location name for an item using the fridges' shelves/drawers
+    // Resolve a human readable location name for an item using relationships
     private func locationName(for item: FridgeItem) -> String {
-        // First try to find a matching shelf
-        for fridge in fridges {
-            if let sid = item.shelfId {
-                if let shelf = fridge.shelves.first(where: { $0.id == sid }) {
-                    return "Shelf: \(shelf.name)"
-                }
-            }
-            if let did = item.drawerId {
-                if let drawer = fridge.drawers.first(where: { $0.id == did }) {
-                    return "Drawer: \(drawer.name)"
-                }
-            }
+        if let shelf = item.shelf {
+            return "Shelf: \(shelf.name)"
+        }
+        if let drawer = item.drawer {
+            return "Drawer: \(drawer.name)"
         }
         return "Unassigned"
     }
@@ -142,7 +197,7 @@ struct ContentView: View {
     }
 }
 
-// New AddFridgeItemView - collects product name and expiration date, saves to model
+// Update AddFridgeItemView to assign shelf/drawer relationships directly
 struct AddFridgeItemView: View {
     @Environment(\.modelContext) private var modelContext
     @Binding var isPresented: Bool
@@ -212,20 +267,20 @@ struct AddFridgeItemView: View {
 
             Section {
                 Button("Save") {
-                    var shelfId: UUID? = nil
-                    var drawerId: UUID? = nil
+                    var shelf: Shelf? = nil
+                    var drawer: Drawer? = nil
 
                     if !fridges.isEmpty {
                         let fridge = fridges[selectedFridgeIndex]
                         if locationType == "Shelf", fridge.shelves.indices.contains(selectedShelfIndex) {
-                            shelfId = fridge.shelves[selectedShelfIndex].id
+                            shelf = fridge.shelves[selectedShelfIndex]
                         }
                         if locationType == "Drawer", fridge.drawers.indices.contains(selectedDrawerIndex) {
-                            drawerId = fridge.drawers[selectedDrawerIndex].id
+                            drawer = fridge.drawers[selectedDrawerIndex]
                         }
                     }
 
-                    let newItem = FridgeItem(timestamp: Date(), productName: productName, expirationDate: expirationDate, shelfId: shelfId, drawerId: drawerId)
+                    let newItem = FridgeItem(timestamp: Date(), productName: productName, expirationDate: expirationDate, shelf: shelf, drawer: drawer)
                     modelContext.insert(newItem)
                     do {
                         try modelContext.save()

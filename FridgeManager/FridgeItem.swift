@@ -14,21 +14,21 @@ final class FridgeItem {
     var productName: String
     var expirationDate: Date
 
-    // location: either shelfId or drawerId (one of them may be nil)
-    var shelfId: UUID?
-    var drawerId: UUID?
+    // relationships to Shelf or Drawer
+    var shelf: Shelf?
+    var drawer: Drawer?
 
-    init(timestamp: Date = Date(), productName: String = "", expirationDate: Date = Date(), shelfId: UUID? = nil, drawerId: UUID? = nil) {
+    init(timestamp: Date = Date(), productName: String = "", expirationDate: Date = Date(), shelf: Shelf? = nil, drawer: Drawer? = nil) {
         self.timestamp = timestamp
         self.productName = productName
         self.expirationDate = expirationDate
-        self.shelfId = shelfId
-        self.drawerId = drawerId
+        self.shelf = shelf
+        self.drawer = drawer
     }
 
     var locationDisplay: String {
-        if let sid = shelfId { return "Shelf: \(sid.uuidString.prefix(6))" }
-        if let did = drawerId { return "Drawer: \(did.uuidString.prefix(6))" }
+        if let shelf = shelf { return "Shelf: \(shelf.name)" }
+        if let drawer = drawer { return "Drawer: \(drawer.name)" }
         return "Unassigned"
     }
 }

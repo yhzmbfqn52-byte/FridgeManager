@@ -1,0 +1,240 @@
+{
+  "source": "/Users/filip/Projects/FridgeManager/FridgeManager/FridgeManager/ContentView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "No Fridge Items yet",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 31
+        }
+      },
+      {
+        "comment": "",
+        "key": "Tap + to add a new item or use the wizard to set up a fridge.",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 36
+        }
+      },
+      {
+        "comment": "",
+        "key": "Create Fridge",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 43
+        }
+      },
+      {
+        "comment": "",
+        "key": "Added: %@",
+        "location": {
+          "startingColumn": 42,
+          "startingLine": 60
+        }
+      },
+      {
+        "comment": "",
+        "key": "Expires: %@",
+        "location": {
+          "startingColumn": 42,
+          "startingLine": 62
+        }
+      },
+      {
+        "comment": "",
+        "key": "Expires: %@",
+        "location": {
+          "startingColumn": 46,
+          "startingLine": 74
+        }
+      },
+      {
+        "comment": "",
+        "key": "Design Fridge",
+        "location": {
+          "startingColumn": 32,
+          "startingLine": 113
+        }
+      },
+      {
+        "comment": "",
+        "key": "Settings",
+        "location": {
+          "startingColumn": 32,
+          "startingLine": 114
+        }
+      },
+      {
+        "comment": "",
+        "key": "About FridgeManager",
+        "location": {
+          "startingColumn": 32,
+          "startingLine": 115
+        }
+      },
+      {
+        "comment": "",
+        "key": "Menu",
+        "location": {
+          "startingColumn": 49,
+          "startingLine": 119
+        }
+      },
+      {
+        "comment": "",
+        "key": "Select an item",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 124
+        }
+      },
+      {
+        "comment": "",
+        "key": "Add Item",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 275
+        }
+      },
+      {
+        "comment": "",
+        "key": "Product",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 193
+        }
+      },
+      {
+        "comment": "",
+        "key": "Expiration",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 197
+        }
+      },
+      {
+        "comment": "",
+        "key": "Fridge / Location",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 201
+        }
+      },
+      {
+        "comment": "",
+        "key": "Product name",
+        "location": {
+          "startingColumn": 27,
+          "startingLine": 194
+        }
+      },
+      {
+        "comment": "",
+        "key": "Expiration date",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 198
+        }
+      },
+      {
+        "comment": "",
+        "key": "No fridges configured. Use the wizard to create one.",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 203
+        }
+      },
+      {
+        "comment": "",
+        "key": "No shelves in the selected fridge",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 220
+        }
+      },
+      {
+        "comment": "",
+        "key": "No drawers in the selected fridge",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 231
+        }
+      },
+      {
+        "comment": "",
+        "key": "Fridge",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 206
+        }
+      },
+      {
+        "comment": "",
+        "key": "Location Type",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 212
+        }
+      },
+      {
+        "comment": "",
+        "key": "Shelf",
+        "location": {
+          "startingColumn": 36,
+          "startingLine": 223
+        }
+      },
+      {
+        "comment": "",
+        "key": "Drawer",
+        "location": {
+          "startingColumn": 36,
+          "startingLine": 234
+        }
+      },
+      {
+        "comment": "",
+        "key": "Shelf",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 213
+        }
+      },
+      {
+        "comment": "",
+        "key": "Drawer",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 214
+        }
+      },
+      {
+        "comment": "",
+        "key": "Save",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 245
+        }
+      },
+      {
+        "comment": "",
+        "key": "Cancel",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 270
+        }
+      },
+      {
+        "comment": "",
+        "key": "Done",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 278
+        }
+      }
+    ]
+  },
+  "version": 1
+}
