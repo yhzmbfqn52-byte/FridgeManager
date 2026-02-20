@@ -13,6 +13,7 @@ struct FridgeManagerApp: App {
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
             Item.self,
+            Fridge.self,
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
 
@@ -23,10 +24,30 @@ struct FridgeManagerApp: App {
         }
     }()
 
+    @State private var isShowingSplash: Bool = true
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ZStack {
+                RootView()
+                    .opacity(isShowingSplash ? 0 : 1)
+
+                if isShowingSplash {
+                    SplashView()
+                        .transition(.opacity)
+                        .onAppear {
+                            // Keep the splash for 1.2 seconds then fade out
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 1.2) {
+                                withAnimation(.easeOut(duration: 0.6)) {
+                                    isShowingSplash = false
+                                }
+                            }
+                        }
+                }
+            }
+            .modelContainer(sharedModelContainer)
+            .preferredColorScheme(.dark)
+            .accentColor(Color(.systemTeal))
         }
-        .modelContainer(sharedModelContainer)
     }
 }

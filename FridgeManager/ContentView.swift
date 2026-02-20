@@ -12,6 +12,9 @@ struct ContentView: View {
     @Environment(\.modelContext) private var modelContext
     @Query private var items: [Item]
 
+    @State private var showingSettings: Bool = false
+    @State private var showingAbout: Bool = false
+
     var body: some View {
         NavigationSplitView {
             List {
@@ -24,33 +27,53 @@ struct ContentView: View {
                 }
                 .onDelete(perform: deleteItems)
             }
+            .listStyle(.insetGrouped)
+            .scrollContentBackground(.hidden) // ensure dark background shows through
+            .background(Color(.systemBackground))
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     EditButton()
+                        .tint(.accentColor)
                 }
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Menu {
+                        Button("Settings") { showingSettings = true }
+                        Button("About FridgeManager") { showingAbout = true }
+                    } label: {
+                        Image(systemName: "line.3.horizontal")
+                            .imageScale(.large)
+                            .accessibilityLabel("Menu")
                     }
                 }
             }
         } detail: {
             Text("Select an item")
+                .foregroundStyle(.secondary)
         }
-    }
-
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(timestamp: Date())
-            modelContext.insert(newItem)
+        .sheet(isPresented: $showingSettings) {
+            NavigationStack {
+                FridgeSettingsView(onDone: { showingSettings = false })
+            }
+            .presentationDetents([.medium, .large])
+        }
+        .sheet(isPresented: $showingAbout) {
+            NavigationStack {
+                AboutView(onDone: { showingAbout = false })
+            }
+            .presentationDetents([.medium])
         }
     }
 
     private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            for index in offsets {
-                modelContext.delete(items[index])
-            }
+        for index in offsets {
+            let item = items[index]
+            modelContext.delete(item)
+        }
+
+        do {
+            try modelContext.save()
+        } catch {
+            print("Failed to delete items: \(error)")
         }
     }
 }
@@ -58,4 +81,5 @@ struct ContentView: View {
 #Preview {
     ContentView()
         .modelContainer(for: Item.self, inMemory: true)
+        .preferredColorScheme(.dark)
 }
