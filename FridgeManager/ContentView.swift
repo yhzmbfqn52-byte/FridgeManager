@@ -14,15 +14,35 @@ struct ContentView: View {
 
     @State private var showingSettings: Bool = false
     @State private var showingAbout: Bool = false
+    @State private var showingAddItem: Bool = false
 
     var body: some View {
         NavigationSplitView {
             List {
                 ForEach(items) { item in
                     NavigationLink {
-                        Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
+                        VStack(alignment: .leading, spacing: 8) {
+                            Text(item.productName.isEmpty ? "Unnamed product" : item.productName)
+                                .font(.title2)
+                            Text("Added: \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
+                                .foregroundStyle(.secondary)
+                            Text("Expires: \(item.expirationDate, format: Date.FormatStyle(date: .numeric))")
+                                .foregroundStyle(.secondary)
+                        }
+                        .padding()
                     } label: {
-                        Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
+                        HStack {
+                            VStack(alignment: .leading) {
+                                Text(item.productName.isEmpty ? "(No name)" : item.productName)
+                                    .font(.headline)
+                                Text("Expires: \(item.expirationDate, format: Date.FormatStyle(date: .numeric))")
+                                    .font(.subheadline)
+                                    .foregroundStyle(.secondary)
+                            }
+                            Spacer()
+                            Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .shortened))
+                                .foregroundStyle(.secondary)
+                        }
                     }
                 }
                 .onDelete(perform: deleteItems)
@@ -32,8 +52,16 @@ struct ContentView: View {
             .background(Color(.systemBackground))
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                        .tint(.accentColor)
+                    HStack(spacing: 12) {
+                        Button {
+                            showingAddItem = true
+                        } label: {
+                            Image(systemName: "plus")
+                        }
+
+                        EditButton()
+                            .tint(.accentColor)
+                    }
                 }
                 ToolbarItem(placement: .navigationBarLeading) {
                     Menu {
@@ -62,6 +90,13 @@ struct ContentView: View {
             }
             .presentationDetents([.medium])
         }
+        .sheet(isPresented: $showingAddItem) {
+            NavigationStack {
+                AddFridgeItemView(isPresented: $showingAddItem)
+                    .environment(\.modelContext, modelContext)
+            }
+            .presentationDetents([.medium])
+        }
     }
 
     private func deleteItems(offsets: IndexSet) {
@@ -74,6 +109,53 @@ struct ContentView: View {
             try modelContext.save()
         } catch {
             print("Failed to delete items: \(error)")
+        }
+    }
+}
+
+// New AddFridgeItemView - collects product name and expiration date, saves to model
+struct AddFridgeItemView: View {
+    @Environment(\.modelContext) private var modelContext
+    @Binding var isPresented: Bool
+
+    @State private var productName: String = ""
+    @State private var expirationDate: Date = Calendar.current.date(byAdding: .day, value: 7, to: Date()) ?? Date()
+
+    var body: some View {
+        Form {
+            Section(header: Text("Product")) {
+                TextField("Product name", text: $productName)
+            }
+
+            Section(header: Text("Expiration")) {
+                DatePicker("Expiration date", selection: $expirationDate, displayedComponents: .date)
+            }
+
+            Section {
+                Button("Save") {
+                    let newItem = FridgeItem(timestamp: Date(), productName: productName, expirationDate: expirationDate)
+                    modelContext.insert(newItem)
+                    do {
+                        try modelContext.save()
+                        isPresented = false
+                    } catch {
+                        print("Failed to save item: \(error)")
+                    }
+                }
+                .disabled(productName.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)
+
+                Button("Cancel", role: .cancel) {
+                    isPresented = false
+                }
+            }
+        }
+        .navigationTitle("Add Item")
+        .toolbar {
+            ToolbarItem(placement: .confirmationAction) {
+                Button("Done") {
+                    isPresented = false
+                }
+            }
         }
     }
 }

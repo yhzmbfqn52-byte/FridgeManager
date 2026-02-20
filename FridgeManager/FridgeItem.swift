@@ -11,8 +11,12 @@ import SwiftData
 @Model
 final class FridgeItem {
     var timestamp: Date
-    
-    init(timestamp: Date) {
+    var productName: String
+    var expirationDate: Date
+
+    init(timestamp: Date = Date(), productName: String = "", expirationDate: Date = Date()) {
         self.timestamp = timestamp
+        self.productName = productName
+        self.expirationDate = expirationDate
     }
 }
