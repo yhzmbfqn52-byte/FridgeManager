@@ -15,6 +15,7 @@ struct ContentView: View {
     @State private var showingSettings: Bool = false
     @State private var showingAbout: Bool = false
     @State private var showingAddItem: Bool = false
+    @State private var showingWizard: Bool = false
 
     var body: some View {
         NavigationSplitView {
@@ -65,6 +66,7 @@ struct ContentView: View {
                 }
                 ToolbarItem(placement: .navigationBarLeading) {
                     Menu {
+                        Button("Design Fridge") { showingWizard = true }
                         Button("Settings") { showingSettings = true }
                         Button("About FridgeManager") { showingAbout = true }
                     } label: {
@@ -96,6 +98,9 @@ struct ContentView: View {
                     .environment(\.modelContext, modelContext)
             }
             .presentationDetents([.medium])
+        }
+        .sheet(isPresented: $showingWizard) {
+            FridgeWizardView(onComplete: { showingWizard = false })
         }
     }
 
