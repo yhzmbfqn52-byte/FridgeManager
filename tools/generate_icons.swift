@@ -17,7 +17,9 @@ let fileMap: [String: Int] = [
     "AppIcon-76@2x.png": 152,
     "AppIcon-83.5@2x.png": 167,
     "AppIcon-1024.png": 1024,
-    "AppLogo-1x.png": 512
+    "AppLogo-1x.png": 512,
+    "AppLogo@2x.png": 1024,
+    "AppLogo@3x.png": 1536
 ]
 
 let repoRoot = URL(fileURLWithPath: FileManager.default.currentDirectoryPath).appendingPathComponent("..").appendingPathComponent("FridgeManager")
