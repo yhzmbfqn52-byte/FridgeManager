@@ -1,5 +1,5 @@
 //
-//  Item.swift
+//  FridgeItem.swift
 //  FridgeManager
 //
 //  Created by Filip Herman on 19/02/2026.
