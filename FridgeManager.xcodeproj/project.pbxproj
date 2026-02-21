@@ -101,6 +101,7 @@
 			buildPhases = (
 				DC67E0C52F477BA8008BD0B7 /* Sources */,
 				DC67E0C62F477BA8008BD0B7 /* Frameworks */,
+				DC67E1A12F477BA8008BD0B7 /* Regenerate App Icons */,
 				DC67E0C72F477BA8008BD0B7 /* Resources */,
 			);
 			buildRules = (
@@ -230,6 +231,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DC67E1A12F477BA8008BD0B7 /* Regenerate App Icons */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Regenerate App Icons";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ \"${REGENERATE_APP_ICONS:-0}\" = \"1\" ]; then \n    if [ -x \"${PROJECT_DIR}/tools/regenerate_icons.sh\" ]; then \"${PROJECT_DIR}/tools/regenerate_icons.sh\"; fi\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DC67E0C52F477BA8008BD0B7 /* Sources */ = {

@@ -1,0 +1,28 @@
+
+=== Running test: FridgeManagerTests/FirstRunTests/testWizardSetsFirstRunFlag ====
+Command line invocation:
+    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild test -project FridgeManager.xcodeproj -scheme FridgeManager -destination "platform=iOS Simulator,id=60648CFD-A7BC-454B-A80C-74170AC32C7D" -derivedDataPath ./build/derivedData "-only-testing:FridgeManagerTests/FirstRunTests/testWizardSetsFirstRunFlag"
+
+2026-02-21 13:40:02.358 xcodebuild[25881:499939] [MT] IDERunDestination: Supported platforms for the buildables in the current scheme is empty.
+2026-02-21 13:41:02.431 xcodebuild[25881:499939] Writing error result bundle to /var/folders/kt/m_rtgb2s5nn7js3w8syxf5nw0000gn/T/ResultBundle_2026-21-02_13-41-0002.xcresult
+xcodebuild: error: Unable to find a device matching the provided destination specifier:
+		{ platform:iOS Simulator, id:60648CFD-A7BC-454B-A80C-74170AC32C7D }
+
+	The requested device could not be found because no available devices matched the request.
+
+	Available destinations for the "FridgeManager" scheme:
+		{ platform:macOS, arch:arm64, variant:Designed for [iPad,iPhone], id:00008103-000D78E93C31001E, name:My Mac }
+		{ platform:iOS, id:dvtdevice-DVTiPhonePlaceholder-iphoneos:placeholder, name:Any iOS Device }
+		{ platform:iOS Simulator, id:dvtdevice-DVTiOSDeviceSimulatorPlaceholder-iphonesimulator:placeholder, name:Any iOS Simulator Device }
+Installing app to simulator (best-effort)
+An error was encountered processing the command (domain=com.apple.CoreSimulator.SimError, code=405):
+Unable to lookup in current state: Shutdown
+An error was encountered processing the command (domain=com.apple.CoreSimulator.SimError, code=405):
+Unable to lookup in current state: Shutdown
+Launching app...
+An error was encountered processing the command (domain=com.apple.CoreSimulator.SimError, code=405):
+Unable to lookup in current state: Shutdown
+An error was encountered processing the command (domain=com.apple.CoreSimulator.SimError, code=405):
+Unable to lookup in current state: Shutdown
+Capturing screenshot to Screenshots/FridgeManagerTests_FirstRunTests_testWizardSetsFirstRunFlag_1771672761.png
+Detected file type 'PNG' from extension

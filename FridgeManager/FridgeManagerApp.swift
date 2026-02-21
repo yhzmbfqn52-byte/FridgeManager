@@ -12,7 +12,10 @@ import SwiftData
 struct FridgeManagerApp: App {
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
-            Item.self,
+            FridgeItem.self,
+            Fridge.self,
+            Shelf.self,
+            Drawer.self,
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
 
@@ -23,10 +26,30 @@ struct FridgeManagerApp: App {
         }
     }()
 
+    @State private var isShowingSplash: Bool = true
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ZStack {
+                RootView()
+                    .opacity(isShowingSplash ? 0 : 1)
+
+                if isShowingSplash {
+                    SplashView()
+                        .transition(.opacity)
+                        .onAppear {
+                            // Keep the splash visible for 3 seconds then fade out
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
+                                withAnimation(.easeOut(duration: 0.6)) {
+                                    isShowingSplash = false
+                                }
+                            }
+                        }
+                }
+            }
+            .modelContainer(sharedModelContainer)
+            .preferredColorScheme(.dark)
+            .accentColor(Color(.systemTeal))
         }
-        .modelContainer(sharedModelContainer)
     }
 }

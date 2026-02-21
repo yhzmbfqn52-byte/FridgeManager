@@ -1,0 +1,49 @@
+{
+  "" : {
+    "diagnostics" : "/Users/filip/Projects/FridgeManager/FridgeManager/build/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/Objects-normal/arm64/FridgeManager-primary.dia",
+    "emit-module-dependencies" : "/Users/filip/Projects/FridgeManager/FridgeManager/build/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/Objects-normal/arm64/FridgeManager-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/filip/Projects/FridgeManager/FridgeManager/build/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/Objects-normal/arm64/FridgeManager-primary-emit-module.dia",
+    "pch" : "/Users/filip/Projects/FridgeManager/FridgeManager/build/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/Objects-normal/arm64/FridgeManager-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/filip/Projects/FridgeManager/FridgeManager/build/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/Objects-normal/arm64/FridgeManager-primary.swiftdeps"
+  },
+  "/Users/filip/Projects/FridgeManager/FridgeManager/FridgeManager/ContentView.swift" : {
+    "const-values" : "/Users/filip/Projects/FridgeManager/FridgeManager/build/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/Objects-normal/arm64/ContentView.swiftconstvalues",
+    "dependencies" : "/Users/filip/Projects/FridgeManager/FridgeManager/build/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/Objects-normal/arm64/ContentView.d",
+    "diagnostics" : "/Users/filip/Projects/FridgeManager/FridgeManager/build/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/Objects-normal/arm64/ContentView.dia",
+    "index-unit-output-path" : "/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/Objects-normal/arm64/ContentView.o",
+    "llvm-bc" : "/Users/filip/Projects/FridgeManager/FridgeManager/build/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/Objects-normal/arm64/ContentView.bc",
+    "object" : "/Users/filip/Projects/FridgeManager/FridgeManager/build/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/Objects-normal/arm64/ContentView.o",
+    "swift-dependencies" : "/Users/filip/Projects/FridgeManager/FridgeManager/build/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/Objects-normal/arm64/ContentView.swiftdeps",
+    "swiftmodule" : "/Users/filip/Projects/FridgeManager/FridgeManager/build/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/Objects-normal/arm64/ContentView~partial.swiftmodule"
+  },
+  "/Users/filip/Projects/FridgeManager/FridgeManager/FridgeManager/FridgeManagerApp.swift" : {
+    "const-values" : "/Users/filip/Projects/FridgeManager/FridgeManager/build/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/Objects-normal/arm64/FridgeManagerApp.swiftconstvalues",
+    "dependencies" : "/Users/filip/Projects/FridgeManager/FridgeManager/build/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/Objects-normal/arm64/FridgeManagerApp.d",
+    "diagnostics" : "/Users/filip/Projects/FridgeManager/FridgeManager/build/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/Objects-normal/arm64/FridgeManagerApp.dia",
+    "index-unit-output-path" : "/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/Objects-normal/arm64/FridgeManagerApp.o",
+    "llvm-bc" : "/Users/filip/Projects/FridgeManager/FridgeManager/build/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/Objects-normal/arm64/FridgeManagerApp.bc",
+    "object" : "/Users/filip/Projects/FridgeManager/FridgeManager/build/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/Objects-normal/arm64/FridgeManagerApp.o",
+    "swift-dependencies" : "/Users/filip/Projects/FridgeManager/FridgeManager/build/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/Objects-normal/arm64/FridgeManagerApp.swiftdeps",
+    "swiftmodule" : "/Users/filip/Projects/FridgeManager/FridgeManager/build/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/Objects-normal/arm64/FridgeManagerApp~partial.swiftmodule"
+  },
+  "/Users/filip/Projects/FridgeManager/FridgeManager/FridgeManager/Item.swift" : {
+    "const-values" : "/Users/filip/Projects/FridgeManager/FridgeManager/build/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/Objects-normal/arm64/Item.swiftconstvalues",
+    "dependencies" : "/Users/filip/Projects/FridgeManager/FridgeManager/build/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/Objects-normal/arm64/Item.d",
+    "diagnostics" : "/Users/filip/Projects/FridgeManager/FridgeManager/build/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/Objects-normal/arm64/Item.dia",
+    "index-unit-output-path" : "/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/Objects-normal/arm64/Item.o",
+    "llvm-bc" : "/Users/filip/Projects/FridgeManager/FridgeManager/build/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/Objects-normal/arm64/Item.bc",
+    "object" : "/Users/filip/Projects/FridgeManager/FridgeManager/build/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/Objects-normal/arm64/Item.o",
+    "swift-dependencies" : "/Users/filip/Projects/FridgeManager/FridgeManager/build/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/Objects-normal/arm64/Item.swiftdeps",
+    "swiftmodule" : "/Users/filip/Projects/FridgeManager/FridgeManager/build/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/Objects-normal/arm64/Item~partial.swiftmodule"
+  },
+  "/Users/filip/Projects/FridgeManager/FridgeManager/build/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/DerivedSources/GeneratedAssetSymbols.swift" : {
+    "const-values" : "/Users/filip/Projects/FridgeManager/FridgeManager/build/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftconstvalues",
+    "dependencies" : "/Users/filip/Projects/FridgeManager/FridgeManager/build/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/Objects-normal/arm64/GeneratedAssetSymbols.d",
+    "diagnostics" : "/Users/filip/Projects/FridgeManager/FridgeManager/build/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/Objects-normal/arm64/GeneratedAssetSymbols.dia",
+    "index-unit-output-path" : "/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "llvm-bc" : "/Users/filip/Projects/FridgeManager/FridgeManager/build/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/Objects-normal/arm64/GeneratedAssetSymbols.bc",
+    "object" : "/Users/filip/Projects/FridgeManager/FridgeManager/build/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "swift-dependencies" : "/Users/filip/Projects/FridgeManager/FridgeManager/build/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftdeps",
+    "swiftmodule" : "/Users/filip/Projects/FridgeManager/FridgeManager/build/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/Objects-normal/arm64/GeneratedAssetSymbols~partial.swiftmodule"
+  }
+}

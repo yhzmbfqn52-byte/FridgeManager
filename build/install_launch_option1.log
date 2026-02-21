@@ -1,0 +1,16 @@
+Installing /Users/filip/Library/Developer/Xcode/DerivedData/FridgeManager-cqwjywvxdxuliyanckgpjwbekvor/Build/Products/Debug-iphonesimulator/FridgeManager.app to 18764EDE-97FF-4EEC-8E7B-2B5383381779
+An error was encountered processing the command (domain=IXErrorDomain, code=13):
+Simulator device failed to install the application.
+Missing bundle ID.
+Underlying error (domain=IXErrorDomain, code=13):
+	Failed to get bundle ID from /Users/filip/Library/Developer/Xcode/DerivedData/FridgeManager-cqwjywvxdxuliyanckgpjwbekvor/Build/Products/Debug-iphonesimulator/FridgeManager.app
+	Missing bundle ID.
+Launching app...
+An error was encountered processing the command (domain=FBSOpenApplicationServiceErrorDomain, code=4):
+Simulator device failed to launch be.razor.FridgeManager.
+Underlying error (domain=FBSOpenApplicationServiceErrorDomain, code=4):
+	The request to open "be.razor.FridgeManager" failed.
+Detected file type 'PNG' from extension
+Wrote screenshot to: FridgeManager/Screenshots/fridgemanager_option1_1771688787.png
+Screenshot saved: FridgeManager/Screenshots/fridgemanager_option1_1771688787.png
+=== Tail of log ===

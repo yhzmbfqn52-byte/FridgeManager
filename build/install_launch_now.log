@@ -1,0 +1,222 @@
+== Simulator check ==
+    FM-Test-iPhone-17 (18764EDE-97FF-4EEC-8E7B-2B5383381779) (Booted) 
+
+== App exists? ==
+App found at build/DerivedData/Build/Products/Debug-iphonesimulator/FridgeManager.app
+
+== Uninstall previous app (ignore errors) ==
+
+== Install app ==
+
+== Launch app ==
+CoreData: error: Failed to stat path '/Users/filip/Library/Developer/CoreSimulator/Devices/18764EDE-97FF-4EEC-8E7B-2B5383381779/data/Containers/Data/Application/09DD2751-0AAC-416B-BFA8-0D94AC328D7B/Library/Application Support/default.store', errno 2 / No such file or directory.
+CoreData: error: Executing as effective user 501
+CoreData: error: Failed to statfs file; errno 2 / No such file or directory.
+CoreData: error: Logging status information for directory path: /Users/filip/Library/Developer/CoreSimulator/Devices/18764EDE-97FF-4EEC-8E7B-2B5383381779/data/Containers/Data/Application/09DD2751-0AAC-416B-BFA8-0D94AC328D7B/Library/Application Support
+CoreData: error: Executing as effective user 501
+CoreData: error: Information for /
+CoreData: error:   File Device ID: 	0
+CoreData: error:   Device ID: 		16777232
+CoreData: error:   File Size: 		704 bytes
+CoreData: error:   File inode: 		2
+CoreData: error:   File user ID: 		0
+CoreData: error:   File group ID: 		0
+CoreData: error:   File Permissions: 	
+CoreData: error: d
+CoreData: error:   755
+CoreData: error:   component is not a symbolic link
+CoreData: error:   component is readable
+CoreData: error:   component is not writeable with errno 30
+CoreData: error: Information for /Users
+CoreData: error:   File Device ID: 	0
+CoreData: error:   Device ID: 		16777232
+CoreData: error:   File Size: 		160 bytes
+CoreData: error:   File inode: 		22639
+CoreData: error:   File user ID: 		0
+CoreData: error:   File group ID: 		80
+CoreData: error:   File Permissions: 	
+CoreData: error: d
+CoreData: error:   755
+CoreData: error:   component is not a symbolic link
+CoreData: error:   component is readable
+CoreData: error:   component is not writeable with errno 13
+CoreData: error: Information for /Users/filip
+CoreData: error:   File Device ID: 	0
+CoreData: error:   Device ID: 		16777232
+CoreData: error:   File Size: 		1376 bytes
+CoreData: error:   File inode: 		235997
+CoreData: error:   File user ID: 		501
+CoreData: error:   File group ID: 		20
+CoreData: error:   File Permissions: 	
+CoreData: error: d
+CoreData: error:   755
+CoreData: error:   component is not a symbolic link
+CoreData: error:   component is readable
+CoreData: error:   component is writeable
+CoreData: error: Information for /Users/filip/Library
+CoreData: error:   File Device ID: 	0
+CoreData: error:   Device ID: 		16777232
+CoreData: error:   File Size: 		3520 bytes
+CoreData: error:   File inode: 		236004
+CoreData: error:   File user ID: 		501
+CoreData: error:   File group ID: 		20
+CoreData: error:   File Permissions: 	
+CoreData: error: d
+CoreData: error:   700
+CoreData: error:   component is not a symbolic link
+CoreData: error:   component is readable
+CoreData: error:   component is writeable
+CoreData: error: Information for /Users/filip/Library/Developer
+CoreData: error:   File Device ID: 	0
+CoreData: error:   Device ID: 		16777232
+CoreData: error:   File Size: 		256 bytes
+CoreData: error:   File inode: 		30900664
+CoreData: error:   File user ID: 		501
+CoreData: error:   File group ID: 		20
+CoreData: error:   File Permissions: 	
+CoreData: error: d
+CoreData: error:   755
+CoreData: error:   component is not a symbolic link
+CoreData: error:   component is readable
+CoreData: error:   component is writeable
+CoreData: error: Information for /Users/filip/Library/Developer/CoreSimulator
+CoreData: error:   File Device ID: 	0
+CoreData: error:   Device ID: 		16777232
+CoreData: error:   File Size: 		192 bytes
+CoreData: error:   File inode: 		30900859
+CoreData: error:   File user ID: 		501
+CoreData: error:   File group ID: 		20
+CoreData: error:   File Permissions: 	
+CoreData: error: d
+CoreData: error:   755
+CoreData: error:   component is not a symbolic link
+CoreData: error:   component is readable
+CoreData: error:   component is writeable
+CoreData: error: Information for /Users/filip/Library/Developer/CoreSimulator/Devices
+CoreData: error:   File Device ID: 	0
+CoreData: error:   Device ID: 		16777232
+CoreData: error:   File Size: 		832 bytes
+CoreData: error:   File inode: 		30900890
+CoreData: error:   File user ID: 		501
+CoreData: error:   File group ID: 		20
+CoreData: error:   File Permissions: 	
+CoreData: error: d
+CoreData: error:   755
+CoreData: error:   component is not a symbolic link
+CoreData: error:   component is readable
+CoreData: error:   component is writeable
+CoreData: error: Information for /Users/filip/Library/Developer/CoreSimulator/Devices/18764EDE-97FF-4EEC-8E7B-2B5383381779
+CoreData: error:   File Device ID: 	0
+CoreData: error:   Device ID: 		16777232
+CoreData: error:   File Size: 		160 bytes
+CoreData: error:   File inode: 		69412022
+CoreData: error:   File user ID: 		501
+CoreData: error:   File group ID: 		20
+CoreData: error:   File Permissions: 	
+CoreData: error: d
+CoreData: error:   755
+CoreData: error:   component is not a symbolic link
+CoreData: error:   component is readable
+CoreData: error:   component is writeable
+CoreData: error: Information for /Users/filip/Library/Developer/CoreSimulator/Devices/18764EDE-97FF-4EEC-8E7B-2B5383381779/data
+CoreData: error:   File Device ID: 	0
+CoreData: error:   Device ID: 		16777232
+CoreData: error:   File Size: 		416 bytes
+CoreData: error:   File inode: 		69412023
+CoreData: error:   File user ID: 		501
+CoreData: error:   File group ID: 		20
+CoreData: error:   File Permissions: 	
+CoreData: error: d
+CoreData: error:   775
+CoreData: error:   component is not a symbolic link
+CoreData: error:   component is readable
+CoreData: error:   component is writeable
+CoreData: error: Information for /Users/filip/Library/Developer/CoreSimulator/Devices/18764EDE-97FF-4EEC-8E7B-2B5383381779/data/Containers
+CoreData: error:   File Device ID: 	0
+CoreData: error:   Device ID: 		16777232
+CoreData: error:   File Size: 		224 bytes
+CoreData: error:   File inode: 		69412236
+CoreData: error:   File user ID: 		501
+CoreData: error:   File group ID: 		20
+CoreData: error:   File Permissions: 	
+CoreData: error: d
+CoreData: error:   755
+CoreData: error:   component is not a symbolic link
+CoreData: error:   component is readable
+CoreData: error:   component is writeable
+CoreData: error: Information for /Users/filip/Library/Developer/CoreSimulator/Devices/18764EDE-97FF-4EEC-8E7B-2B5383381779/data/Containers/Data
+CoreData: error:   File Device ID: 	0
+CoreData: error:   Device ID: 		16777232
+CoreData: error:   File Size: 		192 bytes
+CoreData: error:   File inode: 		69412245
+CoreData: error:   File user ID: 		501
+CoreData: error:   File group ID: 		20
+CoreData: error:   File Permissions: 	
+CoreData: error: d
+CoreData: error:   755
+CoreData: error:   component is not a symbolic link
+CoreData: error:   component is readable
+CoreData: error:   component is writeable
+CoreData: error: Information for /Users/filip/Library/Developer/CoreSimulator/Devices/18764EDE-97FF-4EEC-8E7B-2B5383381779/data/Containers/Data/Application
+CoreData: error:   File Device ID: 	0
+CoreData: error:   Device ID: 		16777232
+CoreData: error:   File Size: 		4640 bytes
+CoreData: error:   File inode: 		69412472
+CoreData: error:   File user ID: 		501
+CoreData: error:   File group ID: 		20
+CoreData: error:   File Permissions: 	
+CoreData: error: d
+CoreData: error:   755
+CoreData: error:   component is not a symbolic link
+CoreData: error:   component is readable
+CoreData: error:   component is writeable
+CoreData: error: Information for /Users/filip/Library/Developer/CoreSimulator/Devices/18764EDE-97FF-4EEC-8E7B-2B5383381779/data/Containers/Data/Application/09DD2751-0AAC-416B-BFA8-0D94AC328D7B
+CoreData: error:   File Device ID: 	0
+CoreData: error:   Device ID: 		16777232
+CoreData: error:   File Size: 		224 bytes
+CoreData: error:   File inode: 		69458676
+CoreData: error:   File user ID: 		501
+CoreData: error:   File group ID: 		20
+CoreData: error:   File Permissions: 	
+CoreData: error: d
+CoreData: error:   755
+CoreData: error:   component is not a symbolic link
+CoreData: error:   component is readable
+CoreData: error:   component is writeable
+CoreData: error: Information for /Users/filip/Library/Developer/CoreSimulator/Devices/18764EDE-97FF-4EEC-8E7B-2B5383381779/data/Containers/Data/Application/09DD2751-0AAC-416B-BFA8-0D94AC328D7B/Library
+CoreData: error:   File Device ID: 	0
+CoreData: error:   Device ID: 		16777232
+CoreData: error:   File Size: 		160 bytes
+CoreData: error:   File inode: 		69458678
+CoreData: error:   File user ID: 		501
+CoreData: error:   File group ID: 		20
+CoreData: error:   File Permissions: 	
+CoreData: error: d
+CoreData: error:   755
+CoreData: error:   component is not a symbolic link
+CoreData: error:   component is readable
+CoreData: error:   component is writeable
+CoreData: error: Failed to stat path '/Users/filip/Library/Developer/CoreSimulator/Devices/18764EDE-97FF-4EEC-8E7B-2B5383381779/data/Containers/Data/Application/09DD2751-0AAC-416B-BFA8-0D94AC328D7B/Library/Application Support', errno 2 / No such file or directory.
+CoreData: error:   Sandbox access to file-write-create denied
+CoreData: error: addPersistentStoreWithType:configuration:URL:options:error: returned error NSCocoaErrorDomain (512)
+CoreData: error: userInfo:
+CoreData: error: 	reason : Failed to create file; code = 2
+CoreData: error: storeType: SQLite
+CoreData: error: configuration: default
+CoreData: error: URL: file:///Users/filip/Library/Developer/CoreSimulator/Devices/18764EDE-97FF-4EEC-8E7B-2B5383381779/data/Containers/Data/Application/09DD2751-0AAC-416B-BFA8-0D94AC328D7B/Library/Application%20Support/default.store
+CoreData: annotation: options:
+CoreData: annotation: 	NSMigratePersistentStoresAutomaticallyOption : 1
+CoreData: annotation: 	NSInferMappingModelAutomaticallyOption : 1
+CoreData: annotation: 	NSPersistentStoreRemoteChangeNotificationOptionKey : 1
+CoreData: annotation: 	NSPersistentHistoryTrackingKey : 1
+CoreData: error: <NSPersistentStoreCoordinator: 0x600002c18900>: Attempting recovery from error encountered during addPersistentStore: 0x600000c00420 Error Domain=NSCocoaErrorDomain Code=512 "The file couldn’t be saved." UserInfo={reason=Failed to create file; code = 2}
+CoreData: error: During recovery, parent directory path reported as missing
+CoreData: error: Recovery attempt while adding <NSPersistentStoreDescription: 0x600000c00420> (type: SQLite, url: file:///Users/filip/Library/Developer/CoreSimulator/Devices/18764EDE-97FF-4EEC-8E7B-2B5383381779/data/Containers/Data/Application/09DD2751-0AAC-416B-BFA8-0D94AC328D7B/Library/Application%20Support/default.store) was successful!
+be.razor.FridgeManager: 42729
+
+== Take screenshot ==
+Detected file type 'PNG' from extension
+Wrote screenshot to: FridgeManager/Screenshots/fridgemanager_run_1771686629.png
+-rw-r--r--@ 1 filip  staff  3141618 Feb 21 16:10 FridgeManager/Screenshots/fridgemanager_run_1771686629.png
+
+== Tail log ==
