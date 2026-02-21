@@ -22,4 +22,58 @@ platform :ios do
     # Upload to TestFlight using the App Store Connect username (set APP_STORE_CONNECT_USERNAME env var)
     upload_to_testflight(username: ENV["APP_STORE_CONNECT_USERNAME"])
   end
+
+  desc "Add testers from fastlane/testers.csv and ensure a group exists"
+  lane :invite_testers do
+    require 'csv'
+    csv_path = "fastlane/testers.csv"
+    UI.user_error!("Missing #{csv_path}; create a CSV with email,first_name,last_name per line") unless File.exist?(csv_path)
+
+    group_name = ENV["TESTFLIGHT_GROUP"] || "Beta Testers"
+
+    UI.message("Adding testers from #{csv_path} to App Store Connect and ensuring group '#{group_name}' exists...")
+
+    CSV.foreach(csv_path) do |row|
+      email = row[0].to_s.strip
+      first = row[1].to_s.strip
+      last  = row[2].to_s.strip
+      next if email.empty?
+
+      begin
+        pilot(add: { email: email, first_name: first, last_name: last })
+        UI.message("Added tester: #{email}")
+      rescue => ex
+        UI.message("Failed to add #{email}: #{ex}")
+      end
+    end
+
+    # Ensure the group exists (pilot can create groups via create_group)
+    begin
+      pilot(create_group: group_name)
+      UI.message("Created group #{group_name}")
+    rescue => _
+      UI.message("Group #{group_name} may already exist or couldn't be created; proceeding")
+    end
+
+    UI.success("Invite testers lane finished - check App Store Connect to confirm invites.")
+  end
+
+  desc "Upload build and distribute to external testers group ('Beta Testers')"
+  lane :distribute_external do
+    group_name = ENV["TESTFLIGHT_GROUP"] || "Beta Testers"
+
+    # Upload the build
+    beta
+
+    # Distribute the latest build to the external group
+    begin
+      pilot(distribute_external: true, groups: [group_name])
+      UI.message("Distributed build to group: #{group_name}")
+    rescue => ex
+      UI.message("Failed to distribute to group #{group_name}: #{ex}")
+      UI.user_error!("Distribution failed; please verify group and permissions")
+    end
+
+    UI.success("Distribution to external testers initiated.")
+  end
 end
