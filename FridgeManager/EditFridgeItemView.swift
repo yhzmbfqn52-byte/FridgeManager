@@ -21,125 +21,136 @@ struct EditFridgeItemView: View {
     @State var selectedDrawerIndex: Int = 0
 
     var body: some View {
-        Form {
-            Section(header: Text("Product")) {
-                TextField("Product name", text: $productName)
-            }
+        NavigationStack {
+            Form {
+                Section(header: Text("Product")) {
+                    TextField("Product name", text: $productName)
+                }
 
-            Section(header: Text("Added")) {
-                // readonly timestamp
-                Text(item.timestamp, style: .date)
-                    .foregroundStyle(.secondary)
-                Text(item.timestamp, style: .time)
-                    .foregroundStyle(.secondary)
-            }
-
-            Section(header: Text("Expiration")) {
-                DatePicker("Expiration date", selection: $expirationDate, displayedComponents: .date)
-            }
-
-            Section(header: Text("Location")) {
-                if fridges.isEmpty {
-                    Text("No fridges configured. Use the wizard to create one.")
+                Section(header: Text("Added")) {
+                    // readonly timestamp
+                    Text(item.timestamp, style: .date)
                         .foregroundStyle(.secondary)
-                } else {
-                    // Use a safe fridge reference so we never index out of bounds
-                    let safeFridgeIndex = min(max(0, selectedFridgeIndex), max(0, fridges.count - 1))
-                    Picker("Fridge", selection: $selectedFridgeIndex) {
-                        ForEach(fridges.indices, id: \.self) { idx in
-                            Text(fridges[idx].name).tag(idx)
-                        }
-                    }
+                    Text(item.timestamp, style: .time)
+                        .foregroundStyle(.secondary)
+                }
 
-                    Picker("Location Type", selection: $locationType) {
-                        Text("Shelf").tag("Shelf")
-                        Text("Drawer").tag("Drawer")
-                        Text("Unassigned").tag("Unassigned")
-                    }
-                    .pickerStyle(.segmented)
+                Section(header: Text("Expiration")) {
+                    DatePicker("Expiration date", selection: $expirationDate, displayedComponents: .date)
+                }
 
-                    if locationType == "Shelf" {
-                        if fridges[safeFridgeIndex].shelves.isEmpty {
-                            Text("No shelves in the selected fridge")
-                                .foregroundStyle(.secondary)
-                        } else {
-                            // clamp shelf index
-                            let safeShelfIndex = min(max(0, selectedShelfIndex), max(0, fridges[safeFridgeIndex].shelves.count - 1))
-                            Picker("Shelf", selection: $selectedShelfIndex) {
-                                ForEach(fridges[safeFridgeIndex].shelves.indices, id: \.self) { idx in
-                                    Text(fridges[safeFridgeIndex].shelves[idx].name).tag(idx)
-                                }
-                            }
-                            .onChange(of: fridges) { _ in
-                                // ensure indices remain valid when the fridges array mutates
-                                selectedFridgeIndex = safeFridgeIndex
-                                selectedShelfIndex = safeShelfIndex
-                            }
-                        }
-                    } else if locationType == "Drawer" {
-                        if fridges[safeFridgeIndex].drawers.isEmpty {
-                            Text("No drawers in the selected fridge")
-                                .foregroundStyle(.secondary)
-                        } else {
-                            let safeDrawerIndex = min(max(0, selectedDrawerIndex), max(0, fridges[safeFridgeIndex].drawers.count - 1))
-                            Picker("Drawer", selection: $selectedDrawerIndex) {
-                                ForEach(fridges[safeFridgeIndex].drawers.indices, id: \.self) { idx in
-                                    Text(fridges[safeFridgeIndex].drawers[idx].name).tag(idx)
-                                }
-                            }
-                            .onChange(of: fridges) { _ in
-                                selectedFridgeIndex = safeFridgeIndex
-                                selectedDrawerIndex = safeDrawerIndex
-                            }
-                        }
-                    } else {
-                        Text("This item will be unassigned")
+                Section(header: Text("Location")) {
+                    if fridges.isEmpty {
+                        Text("No fridges configured. Use the wizard to create one.")
                             .foregroundStyle(.secondary)
+                    } else {
+                        // Use a safe fridge reference so we never index out of bounds
+                        let safeFridgeIndex = min(max(0, selectedFridgeIndex), max(0, fridges.count - 1))
+                        Picker("Fridge", selection: $selectedFridgeIndex) {
+                            ForEach(fridges.indices, id: \.self) { idx in
+                                Text(fridges[idx].name).tag(idx)
+                            }
+                        }
+
+                        Picker("Location Type", selection: $locationType) {
+                            Text("Shelf").tag("Shelf")
+                            Text("Drawer").tag("Drawer")
+                            Text("Unassigned").tag("Unassigned")
+                        }
+                        .pickerStyle(.segmented)
+
+                        if locationType == "Shelf" {
+                            if fridges[safeFridgeIndex].shelves.isEmpty {
+                                Text("No shelves in the selected fridge")
+                                    .foregroundStyle(.secondary)
+                            } else {
+                                // clamp shelf index
+                                let safeShelfIndex = min(max(0, selectedShelfIndex), max(0, fridges[safeFridgeIndex].shelves.count - 1))
+                                Picker("Shelf", selection: $selectedShelfIndex) {
+                                    ForEach(fridges[safeFridgeIndex].shelves.indices, id: \.self) { idx in
+                                        Text(fridges[safeFridgeIndex].shelves[idx].name).tag(idx)
+                                    }
+                                }
+                                .onChange(of: fridges) { _ in
+                                    // ensure indices remain valid when the fridges array mutates
+                                    selectedFridgeIndex = safeFridgeIndex
+                                    selectedShelfIndex = safeShelfIndex
+                                }
+                            }
+                        } else if locationType == "Drawer" {
+                            if fridges[safeFridgeIndex].drawers.isEmpty {
+                                Text("No drawers in the selected fridge")
+                                    .foregroundStyle(.secondary)
+                            } else {
+                                let safeDrawerIndex = min(max(0, selectedDrawerIndex), max(0, fridges[safeFridgeIndex].drawers.count - 1))
+                                Picker("Drawer", selection: $selectedDrawerIndex) {
+                                    ForEach(fridges[safeFridgeIndex].drawers.indices, id: \.self) { idx in
+                                        Text(fridges[safeFridgeIndex].drawers[idx].name).tag(idx)
+                                    }
+                                }
+                                .onChange(of: fridges) { _ in
+                                    selectedFridgeIndex = safeFridgeIndex
+                                    selectedDrawerIndex = safeDrawerIndex
+                                }
+                            }
+                        } else {
+                            Text("This item will be unassigned")
+                                .foregroundStyle(.secondary)
+                        }
+                    }
+                }
+
+                Section {
+                    Button("Save") {
+                        saveChanges()
+                    }
+                    .disabled(productName.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)
+
+                    Button("Cancel", role: .cancel) {
+                        isPresented = false
                     }
                 }
             }
-
-            Section {
-                Button("Save") {
-                    saveChanges()
+            .navigationTitle("Edit Item")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button(action: { isPresented = false }) {
+                        Text("Close")
+                    }
                 }
-                .disabled(productName.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)
-
-                Button("Cancel", role: .cancel) {
-                    isPresented = false
-                }
-            }
-        }
-        .navigationTitle("Edit Item")
-        .toolbar {
-            ToolbarItem(placement: .confirmationAction) {
-                Button("Done") {
-                    saveChanges()
+                ToolbarItem(placement: .confirmationAction) {
+                    Button("Done") {
+                        saveChanges()
+                    }
                 }
             }
-        }
-        .onAppear(perform: populateInitialValues)
-        // when fridges update ensure indices stay valid
-        .onChange(of: fridges) { _ in
-            if fridges.isEmpty {
-                selectedFridgeIndex = 0
-                selectedShelfIndex = 0
-                selectedDrawerIndex = 0
-            } else {
-                selectedFridgeIndex = min(selectedFridgeIndex, fridges.count - 1)
-                if !fridges[selectedFridgeIndex].shelves.isEmpty {
-                    selectedShelfIndex = min(selectedShelfIndex, fridges[selectedFridgeIndex].shelves.count - 1)
-                } else {
+            .onAppear(perform: populateInitialValues)
+            // when fridges update ensure indices stay valid
+            .onChange(of: fridges) { _ in
+                if fridges.isEmpty {
+                    selectedFridgeIndex = 0
                     selectedShelfIndex = 0
-                }
-
-                if !fridges[selectedFridgeIndex].drawers.isEmpty {
-                    selectedDrawerIndex = min(selectedDrawerIndex, fridges[selectedFridgeIndex].drawers.count - 1)
-                } else {
                     selectedDrawerIndex = 0
+                } else {
+                    selectedFridgeIndex = min(selectedFridgeIndex, fridges.count - 1)
+                    if !fridges[selectedFridgeIndex].shelves.isEmpty {
+                        selectedShelfIndex = min(selectedShelfIndex, fridges[selectedFridgeIndex].shelves.count - 1)
+                    } else {
+                        selectedShelfIndex = 0
+                    }
+
+                    if !fridges[selectedFridgeIndex].drawers.isEmpty {
+                        selectedDrawerIndex = min(selectedDrawerIndex, fridges[selectedFridgeIndex].drawers.count - 1)
+                    } else {
+                        selectedDrawerIndex = 0
+                    }
                 }
             }
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(Color(.systemBackground))
+        .ignoresSafeArea()
     }
 
     // Make this internal so tests can use the initializer instead of relying on onAppear.

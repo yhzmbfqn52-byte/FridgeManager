@@ -156,19 +156,22 @@ struct ContentView: View {
         .sheet(isPresented: $showingWizard) {
             FridgeWizardView(onComplete: { showingWizard = false })
         }
-        // Present edit sheet for an item using the optional-item sheet API.
-        .sheet(item: $editingItem) { item in
-            NavigationStack {
-                // Provide a computed Binding<Bool> so EditFridgeItemView can dismiss itself by setting it to false.
-                EditFridgeItemView(
-                    item: item,
-                    isPresented: Binding(get: { editingItem != nil }, set: { newValue in
-                        if !newValue { editingItem = nil }
-                    })
-                )
-                .environment(\.modelContext, modelContext)
+        // Present edit view as a full screen cover so the editor uses the whole display.
+        .fullScreenCover(item: $editingItem) { item in
+            ZStack {
+                Color(.systemBackground)
+                    .ignoresSafeArea()
+                NavigationStack {
+                    EditFridgeItemView(
+                        item: item,
+                        isPresented: Binding(get: { editingItem != nil }, set: { newValue in
+                            if !newValue { editingItem = nil }
+                        })
+                    )
+                    .environment(\.modelContext, modelContext)
+                }
+                .zIndex(1)
             }
-            .presentationDetents([.medium])
         }
     }
 
