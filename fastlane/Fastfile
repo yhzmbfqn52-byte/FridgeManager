@@ -1,0 +1,25 @@
+default_platform(:ios)
+
+platform :ios do
+  desc "Build and upload a beta build to TestFlight"
+  lane :beta do
+    # Set these via environment variables or replace the placeholders below
+    ENV["APP_IDENTIFIER"] ||= "be.razor.FridgeManager"
+    ENV["APPLE_ID"] ||= "your@appleid.example.com"
+    ENV["TEAM_ID"] ||= "<YOUR_TEAM_ID>"
+
+    # Increment build number (uses agvtool or CFBundleVersion bumps)
+    increment_build_number(xcodeproj: "FridgeManager.xcodeproj")
+
+    # Build the app and export for App Store Connect
+    build_app(
+      project: "FridgeManager.xcodeproj",
+      scheme: "FridgeManager",
+      export_method: "app-store"
+      # If you need a custom ExportOptions.plist, pass export_options: { ... } or use -exportOptionsPlist
+    )
+
+    # Upload to TestFlight using the App Store Connect username (set APP_STORE_CONNECT_USERNAME env var)
+    upload_to_testflight(username: ENV["APP_STORE_CONNECT_USERNAME"])
+  end
+end

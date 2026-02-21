@@ -1,0 +1,3 @@
+app_identifier("be.razor.FridgeManager") # The bundle identifier of your app
+apple_id("your@appleid.example.com") # Your Apple ID email (replace this)
+team_id("22L5CCVC3A")
