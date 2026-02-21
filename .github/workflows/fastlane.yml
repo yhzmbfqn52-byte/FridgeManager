@@ -3,6 +3,12 @@ name: CI - Build & Upload to TestFlight
 on:
   push:
     branches: [ main ]
+  workflow_dispatch:
+    inputs:
+      lane:
+        description: 'Fastlane lane to run (e.g., beta, invite_testers, distribute_external)'
+        required: false
+        default: 'beta'
 
 jobs:
   build-and-upload:
@@ -21,19 +27,20 @@ jobs:
         run: gem install fastlane
 
       - name: Prepare App Store Connect API Key
-        if: secrets.APP_STORE_CONNECT_API_KEY != ''
+        if: ${{ secrets.APP_STORE_CONNECT_API_KEY }}
         run: |
           echo "${{ secrets.APP_STORE_CONNECT_API_KEY }}" > ./AuthKey.json
           chmod 600 ./AuthKey.json
         env:
           APP_STORE_CONNECT_API_KEY: ${{ secrets.APP_STORE_CONNECT_API_KEY }}
 
-      - name: Run fastlane beta
+      - name: Run fastlane lane
         env:
           FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD: ${{ secrets.FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD }}
           FASTLANE_USER: ${{ secrets.FASTLANE_USER }}
           APP_STORE_CONNECT_API_KEY_PATH: ./AuthKey.json
+          LANE: ${{ github.event.inputs.lane || 'beta' }}
         run: |
           cd FridgeManager
-          # fastlane will pick up APP_STORE_CONNECT_API_KEY_PATH or AuthKey.json automatically if configured in Appfile/Fastfile
-          fastlane beta
+          echo "Running fastlane lane: ${LANE}"
+          fastlane ${LANE}

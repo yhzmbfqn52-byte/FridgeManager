@@ -37,6 +37,33 @@ cat testers.csv | while IFS=, read -r email first last; do fastlane pilot add --
 - To distribute a build to external testers using pilot:
 fastlane pilot distribute -a be.razor.FridgeManager -b 1.0 -g "Beta Testers" --groups "Beta Testers"
 
+Fastlane automation examples
+
+If you've configured fastlane and added your App Store Connect API key to GitHub Secrets (or have logged in locally), you can automate invites and distribution with the provided lanes.
+
+1) Add testers from `fastlane/testers.csv` (fastlane will read the CSV and add them via `pilot`):
+
+```bash
+# from repo root
+bundle exec fastlane invite_testers
+# or
+fastlane invite_testers
+```
+
+2) Upload a build and distribute to the external group (runs the beta lane then distributes to the group 'Beta Testers'):
+
+```bash
+bundle exec fastlane distribute_external
+# or
+fastlane distribute_external
+```
+
+3) To specify a different group name, set the `TESTFLIGHT_GROUP` env var:
+
+```bash
+TESTFLIGHT_GROUP="My Testers" bundle exec fastlane distribute_external
+```
+
 Notes
-- `pilot` operations may require additional permissions on your App Store Connect account.
-- Creating a public link via the API is not officially supported; using the App Store Connect UI is recommended for public links.
+- `pilot` may require App Manager permissions for the invoking App Store Connect account.
+- The public TestFlight link must be enabled in App Store Connect via the web UI; fastlane/pilot does not reliably create public links.
