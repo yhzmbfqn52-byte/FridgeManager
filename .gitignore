@@ -1,0 +1,68 @@
+# Xcode
+# See https://developer.apple.com/library/archive/documentation/DeveloperTools/Conceptual/DarwinPrj/3-Building_Products/building_products.html
+
+.DS_Store
+/*.pbxuser
+/*.mode1v3
+/*.mode2v3
+/*.perspectivev3
+
+# Xcode 8 and earlier
+build/
+
+# Xcode
+DerivedData/
+
+# Swift Package Manager
+/.build/
+/Packages
+
+# CocoaPods
+Pods/
+
+# Carthage
+Carthage/Build/
+
+# fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+fastlane/test_output
+
+# User settings
+xcuserdata/
+
+# Playgrounds
+timeline.xctimeline
+playground.xcworkspace
+
+# App file
+*.app
+
+# Build artifacts
+/build/
+
+# Misc
+*.ipa
+*.dSYM
+*.moved-aside
+*.xcuserstate
+
+# Ignore Xcode logs
+*.xcactivitylog
+
+# Ignore macOS file system files
+._*
+
+# Ignore other generated files
+*.generated.swift
+
+# Ignore .env files
+.env
+
+# Ignore provisioning and certs
+*.p12
+*.mobileprovision
+
+# Ignore local Packages folder
+Packages/
