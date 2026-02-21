@@ -1,0 +1,6 @@
+{
+  "key_id": "<KEY_ID>",
+  "issuer_id": "<ISSUER_ID>",
+  "key": "-----BEGIN PRIVATE KEY-----\n<PASTE_YOUR_.p8_CONTENT_HERE>\n-----END PRIVATE KEY-----\n",
+  "in_house": false
+}

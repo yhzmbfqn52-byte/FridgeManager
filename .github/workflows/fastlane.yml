@@ -20,10 +20,20 @@ jobs:
       - name: Install fastlane
         run: gem install fastlane
 
-      - name: Run fastlane beta
+      - name: Prepare App Store Connect API Key
+        if: secrets.APP_STORE_CONNECT_API_KEY != ''
+        run: |
+          echo "${{ secrets.APP_STORE_CONNECT_API_KEY }}" > ./AuthKey.json
+          chmod 600 ./AuthKey.json
         env:
           APP_STORE_CONNECT_API_KEY: ${{ secrets.APP_STORE_CONNECT_API_KEY }}
+
+      - name: Run fastlane beta
+        env:
+          FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD: ${{ secrets.FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD }}
           FASTLANE_USER: ${{ secrets.FASTLANE_USER }}
+          APP_STORE_CONNECT_API_KEY_PATH: ./AuthKey.json
         run: |
           cd FridgeManager
+          # fastlane will pick up APP_STORE_CONNECT_API_KEY_PATH or AuthKey.json automatically if configured in Appfile/Fastfile
           fastlane beta
