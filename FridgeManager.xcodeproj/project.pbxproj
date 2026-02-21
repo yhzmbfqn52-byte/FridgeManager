@@ -30,6 +30,11 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		9F3B2C4D5E6F7A8B9C0D1E2F /* Screenshots */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Screenshots;
+			sourceTree = "<group>";
+		};
 		DC67E0CB2F477BA8008BD0B7 /* FridgeManager */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = FridgeManager;
@@ -78,6 +83,7 @@
 				DC67E0CB2F477BA8008BD0B7 /* FridgeManager */,
 				DC67E0DB2F477BAB008BD0B7 /* FridgeManagerTests */,
 				DC67E0E52F477BAB008BD0B7 /* FridgeManagerUITests */,
+				9F3B2C4D5E6F7A8B9C0D1E2F /* Screenshots */,
 				DC67E0CA2F477BA8008BD0B7 /* Products */,
 			);
 			sourceTree = "<group>";
