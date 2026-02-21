@@ -30,6 +30,11 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		DC6276572F4A5C95000FBF83 /* SimulaterScreenshots */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = SimulaterScreenshots;
+			sourceTree = "<group>";
+		};
 		DC67E0CB2F477BA8008BD0B7 /* FridgeManager */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = FridgeManager;
@@ -75,6 +80,7 @@
 		DC67E0C02F477BA8008BD0B7 = {
 			isa = PBXGroup;
 			children = (
+				DC6276572F4A5C95000FBF83 /* SimulaterScreenshots */,
 				DC67E0CB2F477BA8008BD0B7 /* FridgeManager */,
 				DC67E0DB2F477BAB008BD0B7 /* FridgeManagerTests */,
 				DC67E0E52F477BAB008BD0B7 /* FridgeManagerUITests */,
@@ -109,6 +115,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
+				DC6276572F4A5C95000FBF83 /* SimulaterScreenshots */,
 				DC67E0CB2F477BA8008BD0B7 /* FridgeManager */,
 			);
 			name = FridgeManager;
