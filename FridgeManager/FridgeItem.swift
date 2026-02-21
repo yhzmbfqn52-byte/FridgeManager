@@ -9,7 +9,9 @@ import Foundation
 import SwiftData
 
 @Model
-final class FridgeItem {
+final class FridgeItem: Identifiable {
+    // Unique identifier so SwiftUI's sheet(item:) and ForEach can identify instances safely.
+    var id: UUID = UUID()
     var timestamp: Date
     var productName: String
     var expirationDate: Date

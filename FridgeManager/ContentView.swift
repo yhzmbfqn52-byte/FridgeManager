@@ -20,7 +20,6 @@ struct ContentView: View {
 
     // New state for editing an item
     @State private var editingItem: FridgeItem? = nil
-    @State private var showingEditItem: Bool = false
 
     // simple animation state for first item appearance
     @State private var itemsLoaded: Bool = false
@@ -69,7 +68,6 @@ struct ContentView: View {
                                     // Edit button for this item (opens editor where timestamp is not editable)
                                     Button("Edit") {
                                         editingItem = item
-                                        showingEditItem = true
                                     }
                                     .buttonStyle(.bordered)
                                     .padding(.top, 8)
@@ -158,17 +156,19 @@ struct ContentView: View {
         .sheet(isPresented: $showingWizard) {
             FridgeWizardView(onComplete: { showingWizard = false })
         }
-        // Present edit sheet for an item; timestamp is intentionally not editable in editor
-        .sheet(isPresented: $showingEditItem) {
-            if let editingItem {
-                NavigationStack {
-                    EditFridgeItemView(item: editingItem, isPresented: $showingEditItem)
-                        .environment(\.modelContext, modelContext)
-                }
-                .presentationDetents([.medium])
-            } else {
-                EmptyView()
+        // Present edit sheet for an item using the optional-item sheet API.
+        .sheet(item: $editingItem) { item in
+            NavigationStack {
+                // Provide a computed Binding<Bool> so EditFridgeItemView can dismiss itself by setting it to false.
+                EditFridgeItemView(
+                    item: item,
+                    isPresented: Binding(get: { editingItem != nil }, set: { newValue in
+                        if !newValue { editingItem = nil }
+                    })
+                )
+                .environment(\.modelContext, modelContext)
             }
+            .presentationDetents([.medium])
         }
     }
 
