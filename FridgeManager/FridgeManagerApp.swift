@@ -38,8 +38,8 @@ struct FridgeManagerApp: App {
                     SplashView()
                         .transition(.opacity)
                         .onAppear {
-                            // Keep the splash for 1.2 seconds then fade out
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 1.2) {
+                            // Keep the splash visible for 3 seconds then fade out
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
                                 withAnimation(.easeOut(duration: 0.6)) {
                                     isShowingSplash = false
                                 }

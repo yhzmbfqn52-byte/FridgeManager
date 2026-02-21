@@ -1,4 +1,5 @@
 import SwiftUI
+import UIKit
 
 struct SplashView: View {
     @State private var logoScale: CGFloat = 0.6
@@ -11,8 +12,19 @@ struct SplashView: View {
         let hasCustomLogo = UIImage(named: "AppLogo") != nil
 
         ZStack {
-            LinearGradient(gradient: Gradient(colors: [Color(.systemBlue), Color(.systemTeal)]), startPoint: .topLeading, endPoint: .bottomTrailing)
-                .ignoresSafeArea()
+            // Try to load an external background image from the user's path. If it exists and can be loaded, use it as a full-screen background with a dim overlay; otherwise fall back to the gradient.
+            let externalPath = "/Users/filip/Dropbox/Mijn Mac (MacBook Air van Filip)/Downloads/fridge.png"
+            if FileManager.default.fileExists(atPath: externalPath), let bg = UIImage(contentsOfFile: externalPath) {
+                Image(uiImage: bg)
+                    .resizable()
+                    .scaledToFill()
+                    .ignoresSafeArea()
+                    // make sure the image does not overpower the logo/text
+                    .overlay(Color.black.opacity(0.35))
+            } else {
+                LinearGradient(gradient: Gradient(colors: [Color(.systemBlue), Color(.systemTeal)]), startPoint: .topLeading, endPoint: .bottomTrailing)
+                    .ignoresSafeArea()
+            }
 
             VStack(spacing: 16) {
                 Group {
@@ -33,17 +45,25 @@ struct SplashView: View {
                 .opacity(logoOpacity)
                 .shadow(color: Color.black.opacity(0.25), radius: 8, x: 0, y: 4)
 
-                Text("FridgeManager by Filip Herman")
-                    .font(.system(.largeTitle, design: .rounded))
-                    .fontWeight(.bold)
-                    .foregroundColor(.white)
-                    .opacity(textOpacity)
-                    .scaleEffect(textOpacity > 0 ? 1 : 0.98)
-                    // Make text wrap and fit the available width
-                    .multilineTextAlignment(.center)
-                    .lineLimit(2)
-                    .minimumScaleFactor(0.6)
-                    .frame(maxWidth: .infinity)
+                // Adaptive title: compute font size from available width so the text fits the view
+                GeometryReader { geo in
+                    let maxWidth = geo.size.width
+                    // Further reduce multiplier and clamp to tighter max/min so the title reliably fits
+                    let computedSize = min(22, max(9, maxWidth * 0.035))
+
+                    Text("FridgeManager by Filip Herman")
+                        .font(.system(size: computedSize, design: .rounded))
+                        .fontWeight(.bold)
+                        .foregroundColor(Color.white)
+                        .opacity(textOpacity)
+                        .scaleEffect(textOpacity > 0 ? 1 : 0.98)
+                        .multilineTextAlignment(.center)
+                        .lineLimit(2)
+                        .minimumScaleFactor(0.35)
+                        .frame(maxWidth: .infinity)
+                        .fixedSize(horizontal: false, vertical: true)
+                }
+                .frame(height: 34) // slightly smaller reserved space
             }
             .padding(24)
             .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 16, style: .continuous))

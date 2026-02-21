@@ -2,7 +2,7 @@ import Foundation
 import SwiftData
 
 @Model
-final class Fridge {
+final class Fridge: Identifiable {
     @Attribute(.unique) var id: UUID = UUID()
     var name: String
     var type: String

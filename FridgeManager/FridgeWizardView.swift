@@ -90,7 +90,7 @@ struct FridgeWizardView: View {
 
                 Section {
                     Button(action: saveFridge) {
-                        Text(fridge == nil ? "Create Fridge" : "Save Changes")
+                        Text(fridge == nil ? "Create Fridge" : "Update Fridge")
                             .frame(maxWidth: .infinity, alignment: .center)
                     }
                     .tint(.accentColor)

@@ -20,12 +20,16 @@ final class FridgeItem: Identifiable {
     var shelf: Shelf?
     var drawer: Drawer?
 
-    init(timestamp: Date = Date(), productName: String = "", expirationDate: Date = Date(), shelf: Shelf? = nil, drawer: Drawer? = nil) {
+    // optional image stored as Data
+    var imageData: Data?
+
+    init(timestamp: Date = Date(), productName: String = "", expirationDate: Date = Date(), shelf: Shelf? = nil, drawer: Drawer? = nil, imageData: Data? = nil) {
         self.timestamp = timestamp
         self.productName = productName
         self.expirationDate = expirationDate
         self.shelf = shelf
         self.drawer = drawer
+        self.imageData = imageData
     }
 
     var locationDisplay: String {

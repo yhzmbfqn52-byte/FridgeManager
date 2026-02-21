@@ -1,0 +1,491 @@
+Command line invocation:
+    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -project FridgeManager.xcodeproj -scheme FridgeManager -configuration Debug -destination id=18764EDE-97FF-4EEC-8E7B-2B5383381779 -derivedDataPath build/DerivedData clean build CODE_SIGN_IDENTITY= CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO
+
+Build settings from command line:
+    CODE_SIGN_IDENTITY = 
+    CODE_SIGNING_ALLOWED = NO
+    CODE_SIGNING_REQUIRED = NO
+
+2026-02-21 18:44:16.255 xcodebuild[55381:1126332] [MT] IDERunDestination: Supported platforms for the buildables in the current scheme is empty.
+note: Using codesigning identity override: 
+CreateBuildRequest
+
+SendProjectDescription
+
+CreateBuildOperation
+
+** CLEAN SUCCEEDED **
+
+note: Using codesigning identity override: 
+ComputePackagePrebuildTargetDependencyGraph
+
+Prepare packages
+
+CreateBuildRequest
+
+SendProjectDescription
+
+CreateBuildOperation
+
+ComputeTargetDependencyGraph
+note: Building targets in dependency order
+note: Target dependency graph (1 target)
+    Target 'FridgeManager' in project 'FridgeManager' (no dependencies)
+
+GatherProvisioningInputs
+
+CreateBuildDescription
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/usr/bin/actool --print-asset-tag-combinations --output-format xml1 /Users/filip/Projects/FridgeManager/FridgeManager/FridgeManager/FridgeManager/Assets.xcassets
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -v -E -dM -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.2.sdk -x c -c /dev/null
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/usr/bin/actool --version --output-format xml1
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc --version
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld -version_details
+
+Build description signature: 00057227fa169d213e6a4034dee07859
+Build description path: /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/XCBuildData/00057227fa169d213e6a4034dee07859.xcbuilddata
+CreateBuildDirectory /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Products
+    cd /Users/filip/Projects/FridgeManager/FridgeManager/FridgeManager.xcodeproj
+    builtin-create-build-directory /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Products
+
+CreateBuildDirectory /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex
+    cd /Users/filip/Projects/FridgeManager/FridgeManager/FridgeManager.xcodeproj
+    builtin-create-build-directory /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex
+
+ClangStatCache /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.2.sdk /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/SDKStatCaches.noindex/iphonesimulator26.2-23C53-7d00a8b37fbd7999ea79df8ebc024bf0.sdkstatcache
+    cd /Users/filip/Projects/FridgeManager/FridgeManager/FridgeManager.xcodeproj
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.2.sdk -o /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/SDKStatCaches.noindex/iphonesimulator26.2-23C53-7d00a8b37fbd7999ea79df8ebc024bf0.sdkstatcache
+
+WriteAuxiliaryFile /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager-481fc638640fec3d0aed132ca65be358-VFS-iphonesimulator/all-product-headers.yaml
+    cd /Users/filip/Projects/FridgeManager/FridgeManager/FridgeManager.xcodeproj
+    write-file /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager-481fc638640fec3d0aed132ca65be358-VFS-iphonesimulator/all-product-headers.yaml
+
+CreateBuildDirectory /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules
+    cd /Users/filip/Projects/FridgeManager/FridgeManager/FridgeManager.xcodeproj
+    builtin-create-build-directory /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules
+
+CreateBuildDirectory /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/ExplicitPrecompiledModules
+    cd /Users/filip/Projects/FridgeManager/FridgeManager/FridgeManager.xcodeproj
+    builtin-create-build-directory /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/ExplicitPrecompiledModules
+
+CreateBuildDirectory /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/EagerLinkingTBDs/Debug-iphonesimulator
+    cd /Users/filip/Projects/FridgeManager/FridgeManager/FridgeManager.xcodeproj
+    builtin-create-build-directory /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/EagerLinkingTBDs/Debug-iphonesimulator
+
+CreateBuildDirectory /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Products/Debug-iphonesimulator
+    cd /Users/filip/Projects/FridgeManager/FridgeManager/FridgeManager.xcodeproj
+    builtin-create-build-directory /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Products/Debug-iphonesimulator
+
+WriteAuxiliaryFile /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/empty-FridgeManager.plist (in target 'FridgeManager' from project 'FridgeManager')
+    cd /Users/filip/Projects/FridgeManager/FridgeManager
+    write-file /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/empty-FridgeManager.plist
+
+WriteAuxiliaryFile /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/Objects-normal/arm64/FridgeManager.SwiftFileList (in target 'FridgeManager' from project 'FridgeManager')
+    cd /Users/filip/Projects/FridgeManager/FridgeManager
+    write-file /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/Objects-normal/arm64/FridgeManager.SwiftFileList
+
+WriteAuxiliaryFile /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/Objects-normal/arm64/FridgeManager_const_extract_protocols.json (in target 'FridgeManager' from project 'FridgeManager')
+    cd /Users/filip/Projects/FridgeManager/FridgeManager
+    write-file /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/Objects-normal/arm64/FridgeManager_const_extract_protocols.json
+
+WriteAuxiliaryFile /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/Objects-normal/arm64/FridgeManager.SwiftConstValuesFileList (in target 'FridgeManager' from project 'FridgeManager')
+    cd /Users/filip/Projects/FridgeManager/FridgeManager
+    write-file /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/Objects-normal/arm64/FridgeManager.SwiftConstValuesFileList
+
+WriteAuxiliaryFile /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/Script-DC67E1A12F477BA8008BD0B7.sh (in target 'FridgeManager' from project 'FridgeManager')
+    cd /Users/filip/Projects/FridgeManager/FridgeManager
+    write-file /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/Script-DC67E1A12F477BA8008BD0B7.sh
+
+WriteAuxiliaryFile /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/Objects-normal/arm64/FridgeManager.LinkFileList (in target 'FridgeManager' from project 'FridgeManager')
+    cd /Users/filip/Projects/FridgeManager/FridgeManager
+    write-file /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/Objects-normal/arm64/FridgeManager.LinkFileList
+
+WriteAuxiliaryFile /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/Objects-normal/arm64/FridgeManager-OutputFileMap.json (in target 'FridgeManager' from project 'FridgeManager')
+    cd /Users/filip/Projects/FridgeManager/FridgeManager
+    write-file /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/Objects-normal/arm64/FridgeManager-OutputFileMap.json
+
+WriteAuxiliaryFile /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/FridgeManager.hmap (in target 'FridgeManager' from project 'FridgeManager')
+    cd /Users/filip/Projects/FridgeManager/FridgeManager
+    write-file /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/FridgeManager.hmap
+
+WriteAuxiliaryFile /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/FridgeManager.DependencyMetadataFileList (in target 'FridgeManager' from project 'FridgeManager')
+    cd /Users/filip/Projects/FridgeManager/FridgeManager
+    write-file /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/FridgeManager.DependencyMetadataFileList
+
+WriteAuxiliaryFile /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/FridgeManager.DependencyStaticMetadataFileList (in target 'FridgeManager' from project 'FridgeManager')
+    cd /Users/filip/Projects/FridgeManager/FridgeManager
+    write-file /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/FridgeManager.DependencyStaticMetadataFileList
+
+WriteAuxiliaryFile /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/FridgeManager-project-headers.hmap (in target 'FridgeManager' from project 'FridgeManager')
+    cd /Users/filip/Projects/FridgeManager/FridgeManager
+    write-file /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/FridgeManager-project-headers.hmap
+
+WriteAuxiliaryFile /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/FridgeManager-own-target-headers.hmap (in target 'FridgeManager' from project 'FridgeManager')
+    cd /Users/filip/Projects/FridgeManager/FridgeManager
+    write-file /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/FridgeManager-own-target-headers.hmap
+
+WriteAuxiliaryFile /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/FridgeManager-generated-files.hmap (in target 'FridgeManager' from project 'FridgeManager')
+    cd /Users/filip/Projects/FridgeManager/FridgeManager
+    write-file /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/FridgeManager-generated-files.hmap
+
+WriteAuxiliaryFile /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/FridgeManager-all-target-headers.hmap (in target 'FridgeManager' from project 'FridgeManager')
+    cd /Users/filip/Projects/FridgeManager/FridgeManager
+    write-file /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/FridgeManager-all-target-headers.hmap
+
+WriteAuxiliaryFile /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/FridgeManager-all-non-framework-target-headers.hmap (in target 'FridgeManager' from project 'FridgeManager')
+    cd /Users/filip/Projects/FridgeManager/FridgeManager
+    write-file /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/FridgeManager-all-non-framework-target-headers.hmap
+
+WriteAuxiliaryFile /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/FridgeManager-DebugDylibPath-normal-arm64.txt (in target 'FridgeManager' from project 'FridgeManager')
+    cd /Users/filip/Projects/FridgeManager/FridgeManager
+    write-file /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/FridgeManager-DebugDylibPath-normal-arm64.txt
+
+WriteAuxiliaryFile /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/FridgeManager-DebugDylibInstallName-normal-arm64.txt (in target 'FridgeManager' from project 'FridgeManager')
+    cd /Users/filip/Projects/FridgeManager/FridgeManager
+    write-file /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/FridgeManager-DebugDylibInstallName-normal-arm64.txt
+
+WriteAuxiliaryFile /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/8e7b52a4647c828a08dbca5a9dc63096.sb (in target 'FridgeManager' from project 'FridgeManager')
+    cd /Users/filip/Projects/FridgeManager/FridgeManager
+    write-file /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/8e7b52a4647c828a08dbca5a9dc63096.sb
+
+MkDir /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Products/Debug-iphonesimulator/FridgeManager.app (in target 'FridgeManager' from project 'FridgeManager')
+    cd /Users/filip/Projects/FridgeManager/FridgeManager
+    /bin/mkdir -p /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Products/Debug-iphonesimulator/FridgeManager.app
+
+Ld /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Products/Debug-iphonesimulator/FridgeManager.app/__preview.dylib normal (in target 'FridgeManager' from project 'FridgeManager')
+    cd /Users/filip/Projects/FridgeManager/FridgeManager
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Xlinker -reproducible -target arm64-apple-ios26.2-simulator -dynamiclib -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.2.sdk -O0 -L/Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Products/Debug-iphonesimulator -F/Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Products/Debug-iphonesimulator -install_name @rpath/FridgeManager.debug.dylib -dead_strip -rdynamic -Xlinker -no_deduplicate -Xlinker -objc_abi_version -Xlinker 2 -Xlinker -debug_variant -Xlinker -dependency_info -Xlinker /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/Objects-normal/arm64/FridgeManager_dependency_info.dat -o /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Products/Debug-iphonesimulator/FridgeManager.app/__preview.dylib
+
+MkDir /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/assetcatalog_output/unthinned (in target 'FridgeManager' from project 'FridgeManager')
+    cd /Users/filip/Projects/FridgeManager/FridgeManager
+    /bin/mkdir -p /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/assetcatalog_output/unthinned
+
+MkDir /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/assetcatalog_output/thinned (in target 'FridgeManager' from project 'FridgeManager')
+    cd /Users/filip/Projects/FridgeManager/FridgeManager
+    /bin/mkdir -p /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/assetcatalog_output/thinned
+
+GenerateAssetSymbols /Users/filip/Projects/FridgeManager/FridgeManager/FridgeManager/FridgeManager/Assets.xcassets (in target 'FridgeManager' from project 'FridgeManager')
+    cd /Users/filip/Projects/FridgeManager/FridgeManager
+    /Applications/Xcode.app/Contents/Developer/usr/bin/actool /Users/filip/Projects/FridgeManager/FridgeManager/FridgeManager/FridgeManager/Assets.xcassets --compile /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Products/Debug-iphonesimulator/FridgeManager.app --output-format human-readable-text --notices --warnings --export-dependency-info /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/assetcatalog_dependencies --output-partial-info-plist /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/assetcatalog_generated_info.plist --app-icon AppIcon --accent-color AccentColor --compress-pngs --enable-on-demand-resources YES --development-region en --target-device iphone --target-device ipad --minimum-deployment-target 26.2 --platform iphonesimulator --bundle-identifier be.razor.FridgeManager --generate-swift-asset-symbols /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/DerivedSources/GeneratedAssetSymbols.swift --generate-objc-asset-symbols /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/DerivedSources/GeneratedAssetSymbols.h --generate-asset-symbol-index /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/DerivedSources/GeneratedAssetSymbols-Index.plist
+/* com.apple.actool.document.warnings */
+/Users/filip/Projects/FridgeManager/FridgeManager/FridgeManager/FridgeManager/Assets.xcassets:./AppIcon.appiconset/[][iphone][20x20][][][1x][][][][][2d][AppIcon-20.png]: warning: The app icon set "AppIcon" has 2 unassigned children.
+/Users/filip/Projects/FridgeManager/FridgeManager/FridgeManager/FridgeManager/Assets.xcassets:./AppIcon.appiconset/[][iphone][20x20][][][1x][][][][][2d][AppIcon-20.png]: warning: The app icon set "AppIcon" has 2 unassigned children.
+/* com.apple.actool.compilation-results */
+/Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/DerivedSources/GeneratedAssetSymbols-Index.plist
+/Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/DerivedSources/GeneratedAssetSymbols.h
+/Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/DerivedSources/GeneratedAssetSymbols.swift
+
+
+CompileAssetCatalogVariant thinned /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Products/Debug-iphonesimulator/FridgeManager.app /Users/filip/Projects/FridgeManager/FridgeManager/FridgeManager/FridgeManager/Assets.xcassets (in target 'FridgeManager' from project 'FridgeManager')
+    cd /Users/filip/Projects/FridgeManager/FridgeManager
+    /Applications/Xcode.app/Contents/Developer/usr/bin/actool /Users/filip/Projects/FridgeManager/FridgeManager/FridgeManager/FridgeManager/Assets.xcassets --compile /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/assetcatalog_output/thinned --output-format human-readable-text --notices --warnings --export-dependency-info /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/assetcatalog_dependencies_thinned --output-partial-info-plist /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/assetcatalog_generated_info.plist_thinned --app-icon AppIcon --accent-color AccentColor --compress-pngs --enable-on-demand-resources YES --filter-for-thinning-device-configuration iPhone18,3 --filter-for-device-os-version 26.2 --development-region en --target-device iphone --target-device ipad --minimum-deployment-target 26.2 --platform iphonesimulator
+/* com.apple.actool.document.warnings */
+/Users/filip/Projects/FridgeManager/FridgeManager/FridgeManager/FridgeManager/Assets.xcassets:./AppIcon.appiconset/[][iphone][20x20][][][1x][][][][][2d][AppIcon-20.png]: warning: The app icon set "AppIcon" has 2 unassigned children.
+/Users/filip/Projects/FridgeManager/FridgeManager/FridgeManager/FridgeManager/Assets.xcassets:./AppIcon.appiconset: warning: A 1024x1024 app store icon is required for iOS apps
+/Users/filip/Projects/FridgeManager/FridgeManager/FridgeManager/FridgeManager/Assets.xcassets:./AppIcon.appiconset/[][iphone][20x20][][][1x][][][][][2d][AppIcon-20.png]: warning: The app icon set "AppIcon" has 2 unassigned children.
+/Users/filip/Projects/FridgeManager/FridgeManager/FridgeManager/FridgeManager/Assets.xcassets:./AppIcon.appiconset/[][iphone][20x20][][][1x][][][][][2d][AppIcon-20.png]: warning: The app icon set "AppIcon" has 2 unassigned children.
+/* com.apple.actool.document.notices */
+/Users/filip/Projects/FridgeManager/FridgeManager/FridgeManager/FridgeManager/Assets.xcassets:./AppIcon.appiconset/[][ipad][76x76][][][1x][][][][]: notice: 76x76@1x app icons only apply to iPad apps targeting releases of iOS prior to 10.0.
+/* com.apple.actool.compilation-results */
+/Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/assetcatalog_generated_info.plist_thinned
+/Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/assetcatalog_output/thinned/AppIcon60x60@2x.png
+/Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/assetcatalog_output/thinned/AppIcon76x76@2x~ipad.png
+/Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/assetcatalog_output/thinned/Assets.car
+
+
+SwiftDriver FridgeManager normal arm64 com.apple.xcode.tools.swift.compiler (in target 'FridgeManager' from project 'FridgeManager')
+    cd /Users/filip/Projects/FridgeManager/FridgeManager
+    builtin-SwiftDriver -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name FridgeManager -Onone -enforce-exclusivity\=checked @/Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/Objects-normal/arm64/FridgeManager.SwiftFileList -DDEBUG -default-isolation\=MainActor -enable-bare-slash-regex -enable-upcoming-feature DisableOutwardActorInference -enable-upcoming-feature InferSendableFromCaptures -enable-upcoming-feature GlobalActorIsolatedTypesUsability -enable-upcoming-feature MemberImportVisibility -enable-upcoming-feature InferIsolatedConformances -enable-upcoming-feature NonisolatedNonsendingByDefault -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.2.sdk -target arm64-apple-ios26.2-simulator -g -module-cache-path /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/ModuleCache.noindex -Xfrontend -serialize-debugging-options -profile-coverage-mapping -profile-generate -enable-testing -index-store-path /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Index.noindex/DataStore -Xcc -D_LIBCPP_HARDENING_MODE\=_LIBCPP_HARDENING_MODE_DEBUG -swift-version 5 -I /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Products/Debug-iphonesimulator -F /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Products/Debug-iphonesimulator -emit-localized-strings -emit-localized-strings-path /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/Objects-normal/arm64 -c -j8 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/SDKStatCaches.noindex/iphonesimulator26.2-23C53-7d00a8b37fbd7999ea79df8ebc024bf0.sdkstatcache -output-file-map /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/Objects-normal/arm64/FridgeManager-OutputFileMap.json -use-frontend-parseable-output -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/ModuleCache.noindex -sdk-module-cache-path /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/ModuleCache.noindex -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/Objects-normal/arm64/FridgeManager.swiftmodule -validate-clang-modules-once -clang-build-session-file /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/ModuleCache.noindex/Session.modulevalidation -Xcc -I/Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/swift-overrides.hmap -emit-const-values -Xfrontend -const-gather-protocols-file -Xfrontend /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/Objects-normal/arm64/FridgeManager_const_extract_protocols.json -Xcc -iquote -Xcc /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/FridgeManager-generated-files.hmap -Xcc -I/Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/FridgeManager-own-target-headers.hmap -Xcc -I/Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/FridgeManager-all-target-headers.hmap -Xcc -iquote -Xcc /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/FridgeManager-project-headers.hmap -Xcc -I/Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Products/Debug-iphonesimulator/include -Xcc -I/Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/DerivedSources-normal/arm64 -Xcc -I/Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/DerivedSources/arm64 -Xcc -I/Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/DerivedSources -Xcc -DDEBUG\=1 -emit-objc-header -emit-objc-header-path /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/Objects-normal/arm64/FridgeManager-Swift.h -working-directory /Users/filip/Projects/FridgeManager/FridgeManager -experimental-emit-module-separately -disable-cmo
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/ModuleCache.noindex/_Builtin_float-8VVDOPSZ7QPJDKM777I73G42L.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/ModuleCache.noindex/_Builtin_stddef-5QWOODM0IF4T72UN1LLUO6JQ7.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/ModuleCache.noindex/_AvailabilityInternal-AKMWYJEN5A2A2GIX7WMPYHOCW.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/ModuleCache.noindex/SwiftShims-7W6MRKK1SYT8GSCBAE0B7BPW3.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/ModuleCache.noindex/ptrcheck-9ZJ89GWXGOJA052QWMAZO9MK.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/ModuleCache.noindex/_Builtin_stdbool-9S0FUIIRT7KLOOLAE55XYE30G.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/ModuleCache.noindex/DeveloperToolsSupport-1N245MDXA52I2G79O9O37QF77.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/ModuleCache.noindex/_SwiftConcurrencyShims-3CCNVSKO2T2ID2WADU27163QM.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/ModuleCache.noindex/ptrauth-EUMCKU07XPEDXSXVZ8TMD6Z4A.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/ModuleCache.noindex/_Builtin_stdarg-87WADPF1EAKK1A35ZLX94GGEU.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/ModuleCache.noindex/_DarwinFoundation1-7AXZWEBYG79N3AA30XGI5LO3P.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/ModuleCache.noindex/ExtensionFoundation-Q8E2VFN3YJNKNLSACK2555KH.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/ModuleCache.noindex/_DarwinFoundation2-64HW0GXGF3I4LAPA6J991FA2U.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/ModuleCache.noindex/_Builtin_limits-DG4BAZ3JJN0S647V057A1UJHB.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/ModuleCache.noindex/_Builtin_stdint-3G0F6WYVC3P01PBHPFSXLXJ9H.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/ModuleCache.noindex/sys_types-7W2U8KFXL95SS87WNMWG6CDSL.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/ModuleCache.noindex/_Builtin_tgmath-9AUJXFACU0KNJO5DII0AP1UG6.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/ModuleCache.noindex/_Builtin_stdatomic-28TXTZTIE9IM6FU83OL7T1KWZ.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/ModuleCache.noindex/_Builtin_intrinsics-4NCPRLWSJE0GM3P7WW8AA5MM8.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/ModuleCache.noindex/_DarwinFoundation3-CJXL17XOUQRTFFQP8E0K4L8NH.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/ModuleCache.noindex/_Builtin_inttypes-639QN6KVWI0E10J7DOUNUPNS9.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/ModuleCache.noindex/Darwin-BDA020WJOF2PQZQ32B9BWLKI.pcm
+
+LinkAssetCatalog /Users/filip/Projects/FridgeManager/FridgeManager/FridgeManager/FridgeManager/Assets.xcassets (in target 'FridgeManager' from project 'FridgeManager')
+    cd /Users/filip/Projects/FridgeManager/FridgeManager
+    builtin-linkAssetCatalog --thinned /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/assetcatalog_output/thinned --thinned-dependencies /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/assetcatalog_dependencies_thinned --thinned-info-plist-content /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/assetcatalog_generated_info.plist_thinned --unthinned /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/assetcatalog_output/unthinned --unthinned-dependencies /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/assetcatalog_dependencies_unthinned --unthinned-info-plist-content /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/assetcatalog_generated_info.plist_unthinned --output /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Products/Debug-iphonesimulator/FridgeManager.app --plist-output /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/assetcatalog_generated_info.plist
+note: Emplaced /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Products/Debug-iphonesimulator/FridgeManager.app/AppIcon60x60@2x.png (in target 'FridgeManager' from project 'FridgeManager')
+note: Emplaced /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Products/Debug-iphonesimulator/FridgeManager.app/Assets.car (in target 'FridgeManager' from project 'FridgeManager')
+note: Emplaced /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Products/Debug-iphonesimulator/FridgeManager.app/AppIcon76x76@2x~ipad.png (in target 'FridgeManager' from project 'FridgeManager')
+
+ProcessInfoPlistFile /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Products/Debug-iphonesimulator/FridgeManager.app/Info.plist /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/empty-FridgeManager.plist (in target 'FridgeManager' from project 'FridgeManager')
+    cd /Users/filip/Projects/FridgeManager/FridgeManager
+    builtin-infoPlistUtility /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/empty-FridgeManager.plist -producttype com.apple.product-type.application -genpkginfo /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Products/Debug-iphonesimulator/FridgeManager.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -additionalcontentfile /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/assetcatalog_generated_info.plist -o /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Products/Debug-iphonesimulator/FridgeManager.app/Info.plist
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/ModuleCache.noindex/simd-2N3OQV9N9HALB3OBWSS7MBI3J.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/ModuleCache.noindex/MachO-6OCWNRT543PT288FCW9OF2TJA.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/ModuleCache.noindex/ObjectiveC-ELLK464ICQRQOI70NWUSAUDGW.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/ModuleCache.noindex/os_object-8AQW0KYFFGCZ257QLRS121FIR.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/ModuleCache.noindex/os_workgroup-BC7D2HUK2Z45K21C3V6RDP11Y.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/ModuleCache.noindex/Dispatch-29G0AED4BYDEJL1IRKXQ27PB6.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/ModuleCache.noindex/dnssd-1XS14QJQ52HYXJV8PSAHPF0T6.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/ModuleCache.noindex/XPC-4B77H14B4Y8KA9JHR6IAT8XAD.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/ModuleCache.noindex/CoreFoundation-6CMSX771AOF2GF6POZEQ83ZVR.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/ModuleCache.noindex/os-CB4W2VXNCCCFVLS14RXU54NRE.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/ModuleCache.noindex/CoreGraphics-E884QGKWDLSB03MGSQ4HE3YS5.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/ModuleCache.noindex/CFNetwork-ABMGHX5TSC1UE50RMD1QTBA65.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/ModuleCache.noindex/Security-C9ZBL04TP26R3ZKQOD1XVDXG3.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/ModuleCache.noindex/CoreAudioTypes-4LZYD27WKAQJOD8XWKA5PDL8Y.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/ModuleCache.noindex/CoreAudio-AMELB6CP2A769A0TLFVO5Q2I3.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/ModuleCache.noindex/Foundation-ATBW845BA53DOBQUI5Z1TUX7W.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/ModuleCache.noindex/CoreText-8376V6FDY091HXXSXGPHMG82T.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/ModuleCache.noindex/ImageIO-1TFW5L99I1WLMVE2KA1GNVD0A.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/ModuleCache.noindex/Spatial-5LXWT2N6QSU6G4FDDF7J84RGB.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/ModuleCache.noindex/FileProvider-7V2BE58QGZFA1BFIT1HX0GERB.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/ModuleCache.noindex/CoreTransferable-ACB8LR4JQ9WTAQDGSBL8GFFZ0.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/ModuleCache.noindex/Accessibility-BDYV3S7MTNW48Z190UJLJM895.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/ModuleCache.noindex/UserNotifications-CA11R8QDRA3DPONKH88S1IPOO.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/ModuleCache.noindex/IOSurface-3U9UA078ZFB6KZNRUYWCCUTZ7.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/ModuleCache.noindex/UIUtilities-F2AQLQPFMNO587ARP01RX0N1I.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/ModuleCache.noindex/_LocationEssentials-6RA5DLME2LHYZOJR7QK5V5PFI.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/ModuleCache.noindex/DataDetection-DJS7EVG6PIMQKHXL9CAHV263M.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/ModuleCache.noindex/CoreMIDI-7JQHBH9FJQCH7BL63OD7VAYU.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/ModuleCache.noindex/OSLog-596JQAAOE9AD98H4RDI8NUIP1.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/ModuleCache.noindex/UniformTypeIdentifiers-2PW3J0YIUQU0KXN41B7YSTRKT.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/ModuleCache.noindex/Symbols-BEZVBBIOQ9UUSQR89W32708UT.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/ModuleCache.noindex/CoreLocation-4GIXOYDT77XRT8OT1OMXNE4PP.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/ModuleCache.noindex/CoreData-1QB9V2YLOD90T8D30MPA6YS7K.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/ModuleCache.noindex/Network-CH9QYXQVTY7VWF4WV8GOG607I.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/ModuleCache.noindex/Metal-59PKYI7NN598TOW3Q0CIVG770.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/ModuleCache.noindex/OpenGLES-9JF0PZK8XUVNWOPBYPE8338WY.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/ModuleCache.noindex/AudioToolbox-68HV3QBZ8587ZPA8PU4PVYA3J.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/ModuleCache.noindex/AVRouting-9GIGTPUBNVUUE14NZ1HL2ZNKF.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/ModuleCache.noindex/CoreVideo-ET17C1CGUUVG7FQIO0H3A04OA.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/ModuleCache.noindex/CoreImage-A7S97XS8XDXGZNCECESGJDBLW.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/ModuleCache.noindex/CoreMedia-EHB1QB5MQVISZPM3Z1L4FZNIA.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/ModuleCache.noindex/QuartzCore-CRLVZUNHXEJJSOXXRJP4P2AAY.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/ModuleCache.noindex/SwiftUICore-6JHWBH899310TXWB8BCK8B5I.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/ModuleCache.noindex/MediaToolbox-2VHAO8AOBMB6VEWDWOUMX5PTR.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/ModuleCache.noindex/AVFAudio-DPDBH5D2GGBM1DO7PJ2E1N42A.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/ModuleCache.noindex/UIKit-DB5IH9NXPQYZM2XPFTXCFKHTZ.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/ModuleCache.noindex/AVFoundation-8UQW7JX2J42HQ4V56I43Z7ZVQ.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/ModuleCache.noindex/Photos-62WM0ZTW6QLAQEXVDM8E8UNIV.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/ModuleCache.noindex/PhotosUI-CRZZE6CT6J1G62TVTVBVJ3JZ6.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/ModuleCache.noindex/SwiftUI-CZAHEKO8TI88CZZJD1APPHC8D.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/ModuleCache.noindex/MessageUI-B03KWNZMZKY7TNR7D2GJRVHMF.pcm
+
+SwiftEmitModule normal arm64 Emitting\ module\ for\ FridgeManager (in target 'FridgeManager' from project 'FridgeManager')
+
+EmitSwiftModule normal arm64 (in target 'FridgeManager' from project 'FridgeManager')
+    cd /Users/filip/Projects/FridgeManager/FridgeManager
+    
+
+SwiftCompile normal arm64 Compiling\ ContentView.swift,\ Drawer.swift /Users/filip/Projects/FridgeManager/FridgeManager/FridgeManager/ContentView.swift /Users/filip/Projects/FridgeManager/FridgeManager/FridgeManager/Drawer.swift (in target 'FridgeManager' from project 'FridgeManager')
+SwiftCompile normal arm64 /Users/filip/Projects/FridgeManager/FridgeManager/FridgeManager/ContentView.swift (in target 'FridgeManager' from project 'FridgeManager')
+    cd /Users/filip/Projects/FridgeManager/FridgeManager
+    
+/Users/filip/Projects/FridgeManager/FridgeManager/FridgeManager/ContentView.swift:434:30: warning: 'onChange(of:perform:)' was deprecated in iOS 17.0: Use `onChange` with a two or zero parameter action closure instead.
+                            .onChange(of: selectedItem) { newItem in
+                             ^
+/Users/filip/Projects/FridgeManager/FridgeManager/FridgeManager/ContentView.swift:489:145: error: extra argument 'format' in call
+            let line = "Product: \(it.productName.isEmpty ? "(No name)" : it.productName) | \(location) | Expires: \(it.expirationDate, format: df)"
+                                                                                                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+
+SwiftCompile normal arm64 /Users/filip/Projects/FridgeManager/FridgeManager/FridgeManager/Drawer.swift (in target 'FridgeManager' from project 'FridgeManager')
+    cd /Users/filip/Projects/FridgeManager/FridgeManager
+    
+
+Failed frontend command:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift-frontend -frontend -c /Users/filip/Projects/FridgeManager/FridgeManager/FridgeManager/AboutView.swift /Users/filip/Projects/FridgeManager/FridgeManager/FridgeManager/AppLogoView.swift -primary-file /Users/filip/Projects/FridgeManager/FridgeManager/FridgeManager/ContentView.swift -primary-file /Users/filip/Projects/FridgeManager/FridgeManager/FridgeManager/Drawer.swift /Users/filip/Projects/FridgeManager/FridgeManager/FridgeManager/EditFridgeItemView.swift /Users/filip/Projects/FridgeManager/FridgeManager/FridgeManager/Fridge.swift /Users/filip/Projects/FridgeManager/FridgeManager/FridgeManager/FridgeItem.swift /Users/filip/Projects/FridgeManager/FridgeManager/FridgeManager/FridgeManagerApp.swift /Users/filip/Projects/FridgeManager/FridgeManager/FridgeManager/FridgeSettingsView.swift /Users/filip/Projects/FridgeManager/FridgeManager/FridgeManager/FridgeWizardView.swift /Users/filip/Projects/FridgeManager/FridgeManager/FridgeManager/RootView.swift /Users/filip/Projects/FridgeManager/FridgeManager/FridgeManager/Shelf.swift /Users/filip/Projects/FridgeManager/FridgeManager/FridgeManager/SplashView.swift /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/DerivedSources/GeneratedAssetSymbols.swift -emit-dependencies-path /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/Objects-normal/arm64/ContentView.d -emit-const-values-path /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/Objects-normal/arm64/ContentView.swiftconstvalues -emit-reference-dependencies-path /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/Objects-normal/arm64/ContentView.swiftdeps -serialize-diagnostics-path /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/Objects-normal/arm64/ContentView.dia -emit-dependencies-path /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/Objects-normal/arm64/Drawer.d -emit-const-values-path /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/Objects-normal/arm64/Drawer.swiftconstvalues -emit-reference-dependencies-path /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/Objects-normal/arm64/Drawer.swiftdeps -serialize-diagnostics-path /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/Objects-normal/arm64/Drawer.dia -emit-localized-strings -emit-localized-strings-path /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/Objects-normal/arm64 -target arm64-apple-ios26.2-simulator -module-can-import-version DeveloperToolsSupport 23.0.4 23.0.4 -module-can-import-version SwiftUI 7.2.5.1 7.2.5 -module-can-import-version UIKit 9126.2.4.1 9126.2.4 -disable-cross-import-overlay-search -swift-module-cross-import PhotosUI /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/PhotosUI.framework/Modules/PhotosUI.swiftcrossimport/SwiftUI.swiftoverlay -swift-module-cross-import PhotosUI /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/PhotosUI.framework/Modules/PhotosUI.swiftcrossimport/WidgetKit.swiftoverlay -swift-module-cross-import PhotosUI /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.2.sdk/System/Library/Frameworks/PhotosUI.framework/Modules/PhotosUI.swiftcrossimport/SwiftUI.swiftoverlay -swift-module-cross-import PhotosUI /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.2.sdk/System/Library/Frameworks/PhotosUI.framework/Modules/PhotosUI.swiftcrossimport/WidgetKit.swiftoverlay -swift-module-cross-import SwiftData /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.2.sdk/System/Library/Frameworks/SwiftData.framework/Modules/SwiftData.swiftcrossimport/CoreData.swiftoverlay -swift-module-cross-import SwiftData /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.2.sdk/System/Library/Frameworks/SwiftData.framework/Modules/SwiftData.swiftcrossimport/SwiftUI.swiftoverlay -load-resolved-plugin /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/lib/swift/host/plugins/libFoundationMacros.dylib\#/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/swift-plugin-server\#FoundationMacros -load-resolved-plugin /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/lib/swift/host/plugins/libObservationMacros.dylib\#/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/swift-plugin-server\#ObservationMacros -load-resolved-plugin /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/lib/swift/host/plugins/libPreviewsMacros.dylib\#/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/swift-plugin-server\#PreviewsMacros -load-resolved-plugin /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/lib/swift/host/plugins/libSwiftDataMacros.dylib\#/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/swift-plugin-server\#SwiftDataMacros -load-resolved-plugin /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/lib/swift/host/plugins/libSwiftMacros.dylib\#/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/swift-plugin-server\#SwiftMacros -load-resolved-plugin /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/lib/swift/host/plugins/libSwiftUIMacros.dylib\#/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/swift-plugin-server\#SwiftUIMacros -disable-implicit-swift-modules -Xcc -fno-implicit-modules -Xcc -fno-implicit-module-maps -explicit-swift-module-map-file /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/Objects-normal/arm64/FridgeManager-dependencies-1.json -Xllvm -aarch64-use-tbi -enable-objc-interop -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.2.sdk -I /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Products/Debug-iphonesimulator -F /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Products/Debug-iphonesimulator -no-color-diagnostics -Xcc -fno-color-diagnostics -enable-testing -g -debug-info-format\=dwarf -dwarf-version\=5 -module-cache-path /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -profile-generate -profile-coverage-mapping -swift-version 5 -enforce-exclusivity\=checked -Onone -D DEBUG -serialize-debugging-options -const-gather-protocols-file /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/Objects-normal/arm64/FridgeManager_const_extract_protocols.json -enable-upcoming-feature DisableOutwardActorInference -enable-upcoming-feature InferSendableFromCaptures -enable-upcoming-feature GlobalActorIsolatedTypesUsability -enable-upcoming-feature MemberImportVisibility -enable-upcoming-feature InferIsolatedConformances -enable-upcoming-feature NonisolatedNonsendingByDefault -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -default-isolation\=MainActor -empty-abi-descriptor -validate-clang-modules-once -clang-build-session-file /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/ModuleCache.noindex/Session.modulevalidation -Xcc -working-directory -Xcc /Users/filip/Projects/FridgeManager/FridgeManager -enable-anonymous-context-mangled-names -file-compilation-dir /Users/filip/Projects/FridgeManager/FridgeManager -Xcc -D_LIBCPP_HARDENING_MODE\=_LIBCPP_HARDENING_MODE_DEBUG -Xcc -ivfsstatcache -Xcc /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/SDKStatCaches.noindex/iphonesimulator26.2-23C53-7d00a8b37fbd7999ea79df8ebc024bf0.sdkstatcache -Xcc -I/Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/swift-overrides.hmap -Xcc -iquote -Xcc /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/FridgeManager-generated-files.hmap -Xcc -I/Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/FridgeManager-own-target-headers.hmap -Xcc -I/Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/FridgeManager-all-target-headers.hmap -Xcc -iquote -Xcc /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/FridgeManager-project-headers.hmap -Xcc -I/Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Products/Debug-iphonesimulator/include -Xcc -I/Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/DerivedSources-normal/arm64 -Xcc -I/Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/DerivedSources/arm64 -Xcc -I/Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/DerivedSources -Xcc -DDEBUG\=1 -no-auto-bridging-header-chaining -module-name FridgeManager -frontend-parseable-output -disable-clang-spi -target-sdk-version 26.2 -target-sdk-name iphonesimulator26.2 -clang-target arm64-apple-ios26.2-simulator -in-process-plugin-server-path /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/libSwiftInProcPluginServer.dylib -o /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/Objects-normal/arm64/ContentView.o -o /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/Objects-normal/arm64/Drawer.o -index-unit-output-path /FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/Objects-normal/arm64/ContentView.o -index-unit-output-path /FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/Objects-normal/arm64/Drawer.o -index-store-path /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Index.noindex/DataStore -index-system-modules
+SwiftCompile normal arm64 Compiling\ FridgeSettingsView.swift,\ FridgeWizardView.swift /Users/filip/Projects/FridgeManager/FridgeManager/FridgeManager/FridgeSettingsView.swift /Users/filip/Projects/FridgeManager/FridgeManager/FridgeManager/FridgeWizardView.swift (in target 'FridgeManager' from project 'FridgeManager')
+
+SwiftCompile normal arm64 /Users/filip/Projects/FridgeManager/FridgeManager/FridgeManager/FridgeSettingsView.swift (in target 'FridgeManager' from project 'FridgeManager')
+    cd /Users/filip/Projects/FridgeManager/FridgeManager
+    
+
+SwiftCompile normal arm64 /Users/filip/Projects/FridgeManager/FridgeManager/FridgeManager/FridgeWizardView.swift (in target 'FridgeManager' from project 'FridgeManager')
+    cd /Users/filip/Projects/FridgeManager/FridgeManager
+    
+
+SwiftCompile normal arm64 Compiling\ AboutView.swift,\ AppLogoView.swift /Users/filip/Projects/FridgeManager/FridgeManager/FridgeManager/AboutView.swift /Users/filip/Projects/FridgeManager/FridgeManager/FridgeManager/AppLogoView.swift (in target 'FridgeManager' from project 'FridgeManager')
+
+SwiftCompile normal arm64 /Users/filip/Projects/FridgeManager/FridgeManager/FridgeManager/AboutView.swift (in target 'FridgeManager' from project 'FridgeManager')
+    cd /Users/filip/Projects/FridgeManager/FridgeManager
+    
+
+SwiftCompile normal arm64 /Users/filip/Projects/FridgeManager/FridgeManager/FridgeManager/AppLogoView.swift (in target 'FridgeManager' from project 'FridgeManager')
+    cd /Users/filip/Projects/FridgeManager/FridgeManager
+    
+
+SwiftCompile normal arm64 Compiling\ EditFridgeItemView.swift,\ Fridge.swift /Users/filip/Projects/FridgeManager/FridgeManager/FridgeManager/EditFridgeItemView.swift /Users/filip/Projects/FridgeManager/FridgeManager/FridgeManager/Fridge.swift (in target 'FridgeManager' from project 'FridgeManager')
+SwiftCompile normal arm64 /Users/filip/Projects/FridgeManager/FridgeManager/FridgeManager/EditFridgeItemView.swift (in target 'FridgeManager' from project 'FridgeManager')
+    cd /Users/filip/Projects/FridgeManager/FridgeManager
+    
+
+SwiftCompile normal arm64 /Users/filip/Projects/FridgeManager/FridgeManager/FridgeManager/Fridge.swift (in target 'FridgeManager' from project 'FridgeManager')
+    cd /Users/filip/Projects/FridgeManager/FridgeManager
+    
+
+SwiftCompile normal arm64 Compiling\ RootView.swift,\ Shelf.swift /Users/filip/Projects/FridgeManager/FridgeManager/FridgeManager/RootView.swift /Users/filip/Projects/FridgeManager/FridgeManager/FridgeManager/Shelf.swift (in target 'FridgeManager' from project 'FridgeManager')
+
+SwiftCompile normal arm64 /Users/filip/Projects/FridgeManager/FridgeManager/FridgeManager/RootView.swift (in target 'FridgeManager' from project 'FridgeManager')
+    cd /Users/filip/Projects/FridgeManager/FridgeManager
+    
+
+SwiftCompile normal arm64 /Users/filip/Projects/FridgeManager/FridgeManager/FridgeManager/Shelf.swift (in target 'FridgeManager' from project 'FridgeManager')
+    cd /Users/filip/Projects/FridgeManager/FridgeManager
+    
+
+SwiftCompile normal arm64 Compiling\ GeneratedAssetSymbols.swift /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/DerivedSources/GeneratedAssetSymbols.swift (in target 'FridgeManager' from project 'FridgeManager')
+
+SwiftCompile normal arm64 /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/DerivedSources/GeneratedAssetSymbols.swift (in target 'FridgeManager' from project 'FridgeManager')
+    cd /Users/filip/Projects/FridgeManager/FridgeManager
+    
+
+SwiftCompile normal arm64 Compiling\ SplashView.swift /Users/filip/Projects/FridgeManager/FridgeManager/FridgeManager/SplashView.swift (in target 'FridgeManager' from project 'FridgeManager')
+
+SwiftCompile normal arm64 /Users/filip/Projects/FridgeManager/FridgeManager/FridgeManager/SplashView.swift (in target 'FridgeManager' from project 'FridgeManager')
+    cd /Users/filip/Projects/FridgeManager/FridgeManager
+    
+
+SwiftCompile normal arm64 Compiling\ FridgeItem.swift,\ FridgeManagerApp.swift /Users/filip/Projects/FridgeManager/FridgeManager/FridgeManager/FridgeItem.swift /Users/filip/Projects/FridgeManager/FridgeManager/FridgeManager/FridgeManagerApp.swift (in target 'FridgeManager' from project 'FridgeManager')
+
+SwiftCompile normal arm64 /Users/filip/Projects/FridgeManager/FridgeManager/FridgeManager/FridgeItem.swift (in target 'FridgeManager' from project 'FridgeManager')
+    cd /Users/filip/Projects/FridgeManager/FridgeManager
+    
+
+SwiftCompile normal arm64 /Users/filip/Projects/FridgeManager/FridgeManager/FridgeManager/FridgeManagerApp.swift (in target 'FridgeManager' from project 'FridgeManager')
+    cd /Users/filip/Projects/FridgeManager/FridgeManager
+    
+
+SwiftDriverJobDiscovery normal arm64 Emitting module for FridgeManager (in target 'FridgeManager' from project 'FridgeManager')
+
+SwiftDriver\ Compilation\ Requirements FridgeManager normal arm64 com.apple.xcode.tools.swift.compiler (in target 'FridgeManager' from project 'FridgeManager')
+    cd /Users/filip/Projects/FridgeManager/FridgeManager
+    builtin-Swift-Compilation-Requirements -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name FridgeManager -Onone -enforce-exclusivity\=checked @/Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/Objects-normal/arm64/FridgeManager.SwiftFileList -DDEBUG -default-isolation\=MainActor -enable-bare-slash-regex -enable-upcoming-feature DisableOutwardActorInference -enable-upcoming-feature InferSendableFromCaptures -enable-upcoming-feature GlobalActorIsolatedTypesUsability -enable-upcoming-feature MemberImportVisibility -enable-upcoming-feature InferIsolatedConformances -enable-upcoming-feature NonisolatedNonsendingByDefault -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.2.sdk -target arm64-apple-ios26.2-simulator -g -module-cache-path /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/ModuleCache.noindex -Xfrontend -serialize-debugging-options -profile-coverage-mapping -profile-generate -enable-testing -index-store-path /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Index.noindex/DataStore -Xcc -D_LIBCPP_HARDENING_MODE\=_LIBCPP_HARDENING_MODE_DEBUG -swift-version 5 -I /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Products/Debug-iphonesimulator -F /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Products/Debug-iphonesimulator -emit-localized-strings -emit-localized-strings-path /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/Objects-normal/arm64 -c -j8 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/SDKStatCaches.noindex/iphonesimulator26.2-23C53-7d00a8b37fbd7999ea79df8ebc024bf0.sdkstatcache -output-file-map /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/Objects-normal/arm64/FridgeManager-OutputFileMap.json -use-frontend-parseable-output -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/ModuleCache.noindex -sdk-module-cache-path /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/ModuleCache.noindex -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/Objects-normal/arm64/FridgeManager.swiftmodule -validate-clang-modules-once -clang-build-session-file /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/ModuleCache.noindex/Session.modulevalidation -Xcc -I/Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/swift-overrides.hmap -emit-const-values -Xfrontend -const-gather-protocols-file -Xfrontend /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/Objects-normal/arm64/FridgeManager_const_extract_protocols.json -Xcc -iquote -Xcc /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/FridgeManager-generated-files.hmap -Xcc -I/Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/FridgeManager-own-target-headers.hmap -Xcc -I/Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/FridgeManager-all-target-headers.hmap -Xcc -iquote -Xcc /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/FridgeManager-project-headers.hmap -Xcc -I/Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Products/Debug-iphonesimulator/include -Xcc -I/Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/DerivedSources-normal/arm64 -Xcc -I/Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/DerivedSources/arm64 -Xcc -I/Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/DerivedSources -Xcc -DDEBUG\=1 -emit-objc-header -emit-objc-header-path /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/Objects-normal/arm64/FridgeManager-Swift.h -working-directory /Users/filip/Projects/FridgeManager/FridgeManager -experimental-emit-module-separately -disable-cmo
+
+SwiftDriverJobDiscovery normal arm64 Compiling RootView.swift, Shelf.swift (in target 'FridgeManager' from project 'FridgeManager')
+
+SwiftMergeGeneratedHeaders /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/DerivedSources/FridgeManager-Swift.h /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/Objects-normal/arm64/FridgeManager-Swift.h (in target 'FridgeManager' from project 'FridgeManager')
+    cd /Users/filip/Projects/FridgeManager/FridgeManager
+    builtin-swiftHeaderTool -arch arm64 /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/Objects-normal/arm64/FridgeManager-Swift.h -o /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/DerivedSources/FridgeManager-Swift.h
+
+Copy /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Products/Debug-iphonesimulator/FridgeManager.swiftmodule/arm64-apple-ios-simulator.swiftmodule /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/Objects-normal/arm64/FridgeManager.swiftmodule (in target 'FridgeManager' from project 'FridgeManager')
+    cd /Users/filip/Projects/FridgeManager/FridgeManager
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/Objects-normal/arm64/FridgeManager.swiftmodule /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Products/Debug-iphonesimulator/FridgeManager.swiftmodule/arm64-apple-ios-simulator.swiftmodule
+
+Copy /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Products/Debug-iphonesimulator/FridgeManager.swiftmodule/arm64-apple-ios-simulator.swiftdoc /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/Objects-normal/arm64/FridgeManager.swiftdoc (in target 'FridgeManager' from project 'FridgeManager')
+    cd /Users/filip/Projects/FridgeManager/FridgeManager
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/Objects-normal/arm64/FridgeManager.swiftdoc /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Products/Debug-iphonesimulator/FridgeManager.swiftmodule/arm64-apple-ios-simulator.swiftdoc
+
+Copy /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Products/Debug-iphonesimulator/FridgeManager.swiftmodule/arm64-apple-ios-simulator.abi.json /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/Objects-normal/arm64/FridgeManager.abi.json (in target 'FridgeManager' from project 'FridgeManager')
+    cd /Users/filip/Projects/FridgeManager/FridgeManager
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/Objects-normal/arm64/FridgeManager.abi.json /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Products/Debug-iphonesimulator/FridgeManager.swiftmodule/arm64-apple-ios-simulator.abi.json
+
+Copy /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Products/Debug-iphonesimulator/FridgeManager.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/Objects-normal/arm64/FridgeManager.swiftsourceinfo (in target 'FridgeManager' from project 'FridgeManager')
+    cd /Users/filip/Projects/FridgeManager/FridgeManager
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/FridgeManager.build/Debug-iphonesimulator/FridgeManager.build/Objects-normal/arm64/FridgeManager.swiftsourceinfo /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Products/Debug-iphonesimulator/FridgeManager.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo
+
+SwiftDriverJobDiscovery normal arm64 Compiling AboutView.swift, AppLogoView.swift (in target 'FridgeManager' from project 'FridgeManager')
+
+SwiftDriverJobDiscovery normal arm64 Compiling FridgeItem.swift, FridgeManagerApp.swift (in target 'FridgeManager' from project 'FridgeManager')
+
+SwiftDriverJobDiscovery normal arm64 Compiling SplashView.swift (in target 'FridgeManager' from project 'FridgeManager')
+
+SwiftDriverJobDiscovery normal arm64 Compiling FridgeSettingsView.swift, FridgeWizardView.swift (in target 'FridgeManager' from project 'FridgeManager')
+
+SwiftDriverJobDiscovery normal arm64 Compiling GeneratedAssetSymbols.swift (in target 'FridgeManager' from project 'FridgeManager')
+
+warning: Run script build phase 'Regenerate App Icons' will be run during every build because it does not specify any outputs. To address this issue, either add output dependencies to the script phase, or configure it to run in every build by unchecking "Based on dependency analysis" in the script phase. (in target 'FridgeManager' from project 'FridgeManager')
+** BUILD FAILED **
+
+
+The following build commands failed:
+	SwiftCompile normal arm64 /Users/filip/Projects/FridgeManager/FridgeManager/FridgeManager/ContentView.swift (in target 'FridgeManager' from project 'FridgeManager')
+	SwiftCompile normal arm64 Compiling\ ContentView.swift,\ Drawer.swift /Users/filip/Projects/FridgeManager/FridgeManager/FridgeManager/ContentView.swift /Users/filip/Projects/FridgeManager/FridgeManager/FridgeManager/Drawer.swift (in target 'FridgeManager' from project 'FridgeManager')
+	Building project FridgeManager with scheme FridgeManager and configuration Debug
+(3 failures)

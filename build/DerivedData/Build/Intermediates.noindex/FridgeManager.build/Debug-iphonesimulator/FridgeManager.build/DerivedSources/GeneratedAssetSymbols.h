@@ -6,6 +6,12 @@
 #define AC_SWIFT_PRIVATE
 #endif
 
+/// The resource bundle ID.
+static NSString * const ACBundleID AC_SWIFT_PRIVATE = @"be.razor.FridgeManager";
+
+/// The "AccentColor" asset catalog color resource.
+static NSString * const ACColorNameAccentColor AC_SWIFT_PRIVATE = @"AccentColor";
+
 /// The "AppLogo" asset catalog image resource.
 static NSString * const ACImageNameAppLogo AC_SWIFT_PRIVATE = @"AppLogo";
 

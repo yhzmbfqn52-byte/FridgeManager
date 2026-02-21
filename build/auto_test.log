@@ -1,0 +1,55 @@
+Command line invocation:
+    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild test -project FridgeManager.xcodeproj -scheme FridgeManager -destination id=60648CFD-A7BC-454B-A80C-74170AC32C7D -derivedDataPath ./build/DerivedData
+
+2026-02-21 14:56:25.248 xcodebuild[34725:656853] [MT] IDERunDestination: Supported platforms for the buildables in the current scheme is empty.
+ComputePackagePrebuildTargetDependencyGraph
+
+Prepare packages
+
+CreateBuildRequest
+
+SendProjectDescription
+
+CreateBuildOperation
+
+ComputeTargetDependencyGraph
+note: Building targets in dependency order
+note: Target dependency graph (3 targets)
+    Target 'FridgeManagerUITests' in project 'FridgeManager'
+        ➜ Explicit dependency on target 'FridgeManager' in project 'FridgeManager'
+    Target 'FridgeManagerTests' in project 'FridgeManager'
+        ➜ Explicit dependency on target 'FridgeManager' in project 'FridgeManager'
+    Target 'FridgeManager' in project 'FridgeManager' (no dependencies)
+
+GatherProvisioningInputs
+
+CreateBuildDescription
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -v -E -dM -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.2.sdk -x c -c /dev/null
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc --version
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/usr/bin/actool --print-asset-tag-combinations --output-format xml1 /Users/filip/Projects/FridgeManager/FridgeManager/FridgeManager/FridgeManager/Assets.xcassets /Users/filip/Projects/FridgeManager/FridgeManager/FridgeManager/Assets.xcassets
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/usr/bin/actool --version --output-format xml1
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld -version_details
+
+Build description signature: 751d3bb6f5fc59bc72df59a2c69c940e
+Build description path: /Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/XCBuildData/751d3bb6f5fc59bc72df59a2c69c940e.xcbuilddata
+error: unable to attach DB: error: accessing build database "/Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/XCBuildData/build.db": database is locked Possibly there are two concurrent builds running in the same filesystem location.
+warning: Run script build phase 'Regenerate App Icons' will be run during every build because it does not specify any outputs. To address this issue, either add output dependencies to the script phase, or configure it to run in every build by unchecking "Based on dependency analysis" in the script phase. (in target 'FridgeManager' from project 'FridgeManager')
+
+Test session results, code coverage, and logs:
+	/Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Logs/Test/Test-FridgeManager-2026.02.21_14-56-25-+0100.xcresult
+
+Testing failed:
+	unable to attach DB: error: accessing build database "/Users/filip/Projects/FridgeManager/FridgeManager/build/DerivedData/Build/Intermediates.noindex/XCBuildData/build.db": database is locked Possibly there are two concurrent builds running in the same filesystem location.
+	Testing cancelled because the build failed.
+
+** TEST FAILED **
+
+
+The following build commands failed:
+	Testing project FridgeManager with scheme FridgeManager
+(1 failure)

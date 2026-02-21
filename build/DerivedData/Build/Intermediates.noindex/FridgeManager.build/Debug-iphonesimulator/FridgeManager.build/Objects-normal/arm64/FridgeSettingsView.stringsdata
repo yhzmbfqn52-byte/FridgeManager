@@ -7,7 +7,7 @@
         "key": "Settings",
         "location": {
           "startingColumn": 26,
-          "startingLine": 70
+          "startingLine": 97
         }
       },
       {
@@ -15,7 +15,7 @@
         "key": "Are you sure?",
         "location": {
           "startingColumn": 29,
-          "startingLine": 82
+          "startingLine": 143
         }
       },
       {
@@ -23,7 +23,7 @@
         "key": "Fridges",
         "location": {
           "startingColumn": 34,
-          "startingLine": 20
+          "startingLine": 22
         }
       },
       {
@@ -31,7 +31,7 @@
         "key": "No fridges configured.",
         "location": {
           "startingColumn": 26,
-          "startingLine": 22
+          "startingLine": 24
         }
       },
       {
@@ -39,7 +39,7 @@
         "key": "Edit",
         "location": {
           "startingColumn": 36,
-          "startingLine": 42
+          "startingLine": 44
         }
       },
       {
@@ -47,7 +47,7 @@
         "key": "Set Default",
         "location": {
           "startingColumn": 36,
-          "startingLine": 48
+          "startingLine": 50
         }
       },
       {
@@ -55,7 +55,23 @@
         "key": "(Default)",
         "location": {
           "startingColumn": 46,
-          "startingLine": 32
+          "startingLine": 34
+        }
+      },
+      {
+        "comment": "",
+        "key": "Delete",
+        "location": {
+          "startingColumn": 39,
+          "startingLine": 70
+        }
+      },
+      {
+        "comment": "",
+        "key": "Edit",
+        "location": {
+          "startingColumn": 39,
+          "startingLine": 77
         }
       },
       {
@@ -63,7 +79,7 @@
         "key": "Delete All Fridges",
         "location": {
           "startingColumn": 26,
-          "startingLine": 63
+          "startingLine": 90
         }
       },
       {
@@ -71,7 +87,15 @@
         "key": "Done",
         "location": {
           "startingColumn": 24,
-          "startingLine": 73
+          "startingLine": 101
+        }
+      },
+      {
+        "comment": "",
+        "key": "Add Fridge",
+        "location": {
+          "startingColumn": 37,
+          "startingLine": 113
         }
       },
       {
@@ -79,7 +103,7 @@
         "key": "Delete All",
         "location": {
           "startingColumn": 20,
-          "startingLine": 83
+          "startingLine": 144
         }
       },
       {
@@ -87,7 +111,7 @@
         "key": "Cancel",
         "location": {
           "startingColumn": 20,
-          "startingLine": 86
+          "startingLine": 147
         }
       },
       {
@@ -95,7 +119,7 @@
         "key": "This will remove all saved fridges from local storage.",
         "location": {
           "startingColumn": 18,
-          "startingLine": 88
+          "startingLine": 149
         }
       }
     ]

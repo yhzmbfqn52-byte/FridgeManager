@@ -2,6 +2,13 @@
 # Regenerate app icons and AppLogo from the programmatic generator
 set -euo pipefail
 cd "$(dirname "$0")"
+
+# Clean screenshot PNGs in known project Screenshots folders before build/tests
+echo "Cleaning project Screenshots folders..."
+# paths relative to tools/ -> ../FridgeManager/Screenshots and ../FridgeManager/FridgeManager/Screenshots
+rm -f ../FridgeManager/Screenshots/*.png || true
+rm -f ../FridgeManager/FridgeManager/Screenshots/*.png || true
+
 # Ensure the generator is executable
 chmod +x generate_icons.swift
 # Run the generator

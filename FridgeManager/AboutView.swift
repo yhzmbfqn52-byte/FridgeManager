@@ -3,6 +3,8 @@ import SwiftUI
 struct AboutView: View {
     var onDone: (() -> Void)?
 
+    @Environment(\.openURL) private var openURL
+
     private var appName: String {
         Bundle.main.object(forInfoDictionaryKey: "CFBundleName") as? String ?? "FridgeManager"
     }
@@ -26,6 +28,21 @@ struct AboutView: View {
             Text("FridgeManager helps you model and manage your fridge inventory and shelves.")
                 .multilineTextAlignment(.center)
                 .padding()
+
+            // Link button to open the Razor website
+            Button {
+                if let url = URL(string: "https://www.razor.be") {
+                    openURL(url)
+                }
+            } label: {
+                Label("Visit razor.be", systemImage: "link")
+                    .font(.body)
+                    .padding(.vertical, 8)
+                    .padding(.horizontal, 12)
+                    .background(Color(.systemGray6))
+                    .cornerRadius(8)
+            }
+            .buttonStyle(.plain)
 
             Spacer()
         }

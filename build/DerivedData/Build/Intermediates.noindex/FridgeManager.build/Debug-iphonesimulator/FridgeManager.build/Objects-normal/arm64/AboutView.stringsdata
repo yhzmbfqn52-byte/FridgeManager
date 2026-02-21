@@ -7,7 +7,7 @@
         "key": "About",
         "location": {
           "startingColumn": 26,
-          "startingLine": 33
+          "startingLine": 50
         }
       },
       {
@@ -15,7 +15,15 @@
         "key": "FridgeManager helps you model and manage your fridge inventory and shelves.",
         "location": {
           "startingColumn": 18,
-          "startingLine": 26
+          "startingLine": 28
+        }
+      },
+      {
+        "comment": "",
+        "key": "Visit razor.be",
+        "location": {
+          "startingColumn": 23,
+          "startingLine": 38
         }
       },
       {
@@ -23,7 +31,7 @@
         "key": "Done",
         "location": {
           "startingColumn": 24,
-          "startingLine": 36
+          "startingLine": 53
         }
       }
     ]
