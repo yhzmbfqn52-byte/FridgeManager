@@ -1,0 +1,14 @@
+git_url("https://github.com/YOUR_ORG/certificates.git")
+
+# match configuration
+# Set type to 'appstore' for App Store distribution (or 'adhoc' for ad-hoc)
+# Replace YOUR_ORG and provide the repo where certificates/profiles are stored.
+
+# Match will use the app identifier(s) below
+app_identifier(["be.razor.FridgeManager"]) 
+
+# Team ID detected from project
+team_id("22L5CCVC3A")
+
+# storage_mode can be 'git' (default)
+storage_mode("git")
